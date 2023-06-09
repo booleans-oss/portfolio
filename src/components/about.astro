@@ -1,29 +1,36 @@
 ---
+import { Trans } from "astro-i18next/components";
 ---
 
 <div class="text-blue-100/70 text-lg">
     <p class="mb-4">
-        I am a self-taught developer with a passion for building web applications. I
-        have a profound knowledge of the{" "}
-        <span class="text-blue-100">Javascript ecosystem</span> and
-        <span class="text-blue-100">Frontend frameworks</span>{" "}
-        (React, Vue, Svelte, etc.) and I am always willing to aquire new knowledge.
+        <Trans i18nKey="index.about.paragraph1">
+            I am a self-taught developer with a passion for building web
+            applications. I have a profound knowledge of the{" "}
+            <span class="text-blue-100">Javascript ecosystem</span> and
+            <span class="text-blue-100">Frontend frameworks</span>{" "}
+            (React, Vue, Svelte, etc.) and I am always willing to aquire new knowledge.
+        </Trans>
     </p>
     <p class="mb-4">
-        I started freelancing in{" "}
-        <span class="text-blue-100">2019</span> by selling my services on Fiverr.
-        I have since worked with clients from{" "}
-        <span class="text-blue-100">all over the world</span>, helping them
-        build their websites and applications. I also worked in <span
-            class="text-blue-100">startups</span
-        > and{" "}
-        <span class="text-blue-100">agencies</span> which helped me gain a wide range
-        of skills.
+        <Trans i18nKey="index.about.paragraph2">
+            I started freelancing in{" "}
+            <span class="text-blue-100">2019</span> by selling my services on Fiverr.
+            I have since worked with clients from{" "}
+            <span class="text-blue-100">all over the world</span>, helping them
+            build their websites and applications. I also worked in <span
+                class="text-blue-100">startups</span
+            > and{" "}
+            <span class="text-blue-100">agencies</span> which helped me gain a wide
+            range of skills.
+        </Trans>
     </p>
     <p>
-        When I’m not at the computer, I like to write articles, and document my
-        journey. I also like hanging out with my friends from school. I am
-        currently a business student specialised in {" "}
-        <span class="text-blue-100">Finance</span>.
+        <Trans i18nKey="index.about.paragraph3">
+            When I’m not at the computer, I like to write articles, and document
+            my journey. I also like hanging out with my friends from school. I
+            am currently a business student specialised in {" "}
+            <span class="text-blue-100">Finance</span>.
+        </Trans>
     </p>
 </div>

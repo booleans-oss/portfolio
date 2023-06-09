@@ -1,0 +1,174 @@
+{
+  "site": {
+    "title": "Clement - Software Engineer",
+    "description": "I build accessible, inclusive websites and applications, from scratch and with a focus on performance. I want to create experiences for the web.",
+    "thumbnail": "https://images2.imgbox.com/11/bd/HRk6JAdN_o.png",
+    "languages": {
+      "en": "English",
+      "fr": "French"
+    }
+  },
+  "index": {
+    "presentation": {
+      "role": "Software Engineer",
+      "description": "I build <0>accessible</0>, <1>inclusive</1> websites and applications, from scratch and with a focus on <2>performance</2>. I want to create <3>experiences</3> for the web."
+    },
+    "tree": {
+      "about": "About",
+      "experience": "Experience",
+      "projects": "Projets"
+    },
+    "about": {
+      "paragraph1": "I am a self-taught developer with a passion for building web applications. I have a profound knowledge of the <0>Javascript ecosystem</0> and <1>Frontend frameworks</1> (React, Vue, Svelte, etc.). I am always willing to aquire new knowledge.",
+      "paragraph2": "I started freelancing in <0>2019</0> by selling my services on Fiverr. I have since worked with clients from <1>all over the world</1>, helping them build their websites and applications. I also worked in <2>startups</2> and <3>agencies</3> which helped me gain a wide range of skills.",
+      "paragraph3": "When I’m not at the computer, I like to write articles, and document my journey. I also like hanging out with my friends from school. I am currently a business student specialised in <0>Finance</0>."
+    },
+    "experience": {
+      "showAllButton": "Show non-tech experience",
+      "experiences": [
+        {
+          "title": "Software Engineer",
+          "tasks": [
+            "Built the main marketing website",
+            "Worked on the unique warehouse utility dashboard",
+            "Launched multiple partner pages",
+            "Peer reviewed different critical pull requests and issues"
+          ],
+          "tags": [
+            "Typescript",
+            "React",
+            "Next.js",
+            "Chakra UI",
+            "Nest.js",
+            "Azure",
+            "Shopify"
+          ]
+        },
+        {
+          "title": "Software Engineer",
+          "tasks": [
+            "Developed main marketing website",
+            "Implement tools to facilitate open source contributions (e2e tests, workflows)",
+            "Integrated different third-party tools (Google API) to front-end",
+            "Supervised the front-end team"
+          ],
+          "tags": [
+            "Typescript",
+            "React",
+            "Next.js",
+            "Chakra UI",
+            "Loopback",
+            "AWS",
+            "Google API"
+          ]
+        },
+        {
+          "title": "Treasurer",
+          "tasks": [
+            "Responsible for all accounting and financial operations",
+            "Created a complete and new accounting system with Excel",
+            "Managed the association's budget",
+            "Assured the financial stability of the association"
+          ],
+          "tags": [
+            "Accounting",
+            "Finance",
+            "Excel",
+            "PowerPoint",
+            "Communication",
+            "Leadership",
+            "Logic"
+          ]
+        },
+        {
+          "title": "Chief Technical Officer",
+          "tasks": [
+            "Developed the main marketing website",
+            "Responsible for handling customers requests",
+            "Manage development team to fulfill customers' needs",
+            "Assured the quality of the code as well as the security of our products"
+          ],
+          "tags": [
+            "Typescript",
+            "React",
+            "Next.js",
+            "Nest.js",
+            "Express.js",
+            "Docker",
+            "Nx Workspace"
+          ]
+        },
+        {
+          "title": "Sales Intern",
+          "tasks": [
+            "Advised and helped customers",
+            "Organized the display (merchandising)",
+            "Received and managed product deliveries",
+            "Maintained the reserve"
+          ],
+          "tags": [
+            "Negotiation",
+            "Sales",
+            "Merchandising",
+            "Communication",
+            "Teamwork",
+            "Empathy",
+            "Organization"
+          ]
+        },
+        {
+          "title": "Policy Analyst",
+          "tasks": [
+            "Wrote several articles about International Relations, Economics, Human Rights, Environment and Geopolitics",
+            "Participated in several advocacy campaigns",
+            "Researched and analyzed several topics for policy papers"
+          ],
+          "tags": [
+            "Research",
+            "Analysis",
+            "Writing",
+            "Teamwork",
+            "Critical Thinking",
+            "Logic",
+            "Reasoning"
+          ]
+        },
+        {
+          "title": "Software Engineer",
+          "tasks": [
+            "Responsible for all frontend and backend development demands",
+            "Developed >20 websites, dashboards for all platforms",
+            "Implemented an e-commerce website for the company",
+            "Handled all the company's servers, databases and finished products"
+          ],
+          "tags": [
+            "Typescript",
+            "React",
+            "Vue.js",
+            "Svelte",
+            "Express.js",
+            "Github",
+            "Turborepo"
+          ]
+        },
+        {
+          "title": "President",
+          "tasks": [
+            "Organized multiple Model United Nations across the world",
+            "Participated in different Model United Nations",
+            "Won multiple awards and recognitions"
+          ],
+          "tags": [
+            "Public Speaking",
+            "Debating",
+            "Leadership",
+            "Teamwork",
+            "Bureaucracy",
+            "Parliamentary Procedures",
+            "Research"
+          ]
+        }
+      ]
+    }
+  }
+}

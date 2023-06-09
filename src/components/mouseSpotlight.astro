@@ -9,8 +9,10 @@
 <script>
   const mouse = document.querySelector<HTMLDivElement>(".mouse");
   const handleMouseMove = (event: MouseEvent) => {
+    const scrollY = window.scrollY;
     const x = event.pageX;
-    const y = event.pageY;
+    const y = event.pageY - scrollY;
+
 
     if (!mouse) return;
 

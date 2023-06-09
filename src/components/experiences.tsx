@@ -1,8 +1,12 @@
 import { Switch } from "./ui/switch";
 import ExternalArrow from "../icones/ExternalArrow";
 import { useMemo, useState } from "react";
+import { useTranslation } from "react-i18next";
+import { cn } from "../lib/utils";
 
 export default function ExperiencesComponent() {
+  const { t } = useTranslation();
+
   const experiences = useMemo(
     () => [
       {
@@ -10,40 +14,23 @@ export default function ExperiencesComponent() {
         link: "https://www.responsible.us/",
         title: (
           <h2 className="text-blue-100/90 font-medium group-hover:text-[#57f221] transition">
-            Software Engineer · RESPONSIBLE{" "}
+            {t("index.experience.experiences.0.title")} · RESPONSIBLE{" "}
             <ExternalArrow className="inline h-4 w-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition" />
           </h2>
         ),
         date: "2022 - present",
-        achievements: [
-          "Built the main marketing website",
-          "Worked on the unique warehouse utility dashboard",
-          "Launched multiple partner pages",
-          "Peer reviewed different critical pull requests and issues",
-        ],
-        tags: [
+        achievements: t("index.experience.experiences.0.tasks", {
+          returnObjects: true,
+        }) as Array<string>,
+        tags: (
+          t("index.experience.experiences.0.tags", {
+            returnObjects: true,
+          }) as Array<string>
+        ).map((tag) => (
           <li className="flex items-center rounded-full bg-blue-500/20 xl:bg-slate-700/10 group-hover:bg-[rgba(87,_242,_33,_0.10)] px-3 py-1 text-xs font-medium leading-5 transition ease-in-out text-blue-100/50 xl:text-blue-100/40 group-hover:text-[#57f221]">
-            Typescript
-          </li>,
-          <li className="flex items-center rounded-full bg-blue-500/20 xl:bg-slate-700/10 group-hover:bg-[rgba(87,_242,_33,_0.10)] px-3 py-1 text-xs font-medium leading-5 transition ease-in-out text-blue-100/50 xl:text-blue-100/40 group-hover:text-[#57f221]">
-            React
-          </li>,
-          <li className="flex items-center rounded-full bg-blue-500/20 xl:bg-slate-700/10 group-hover:bg-[rgba(87,_242,_33,_0.10)] px-3 py-1 text-xs font-medium leading-5 transition ease-in-out text-blue-100/50 xl:text-blue-100/40 group-hover:text-[#57f221]">
-            Next.js
-          </li>,
-          <li className="flex items-center rounded-full bg-blue-500/20 xl:bg-slate-700/10 group-hover:bg-[rgba(87,_242,_33,_0.10)] px-3 py-1 text-xs font-medium leading-5 transition ease-in-out text-blue-100/50 xl:text-blue-100/40 group-hover:text-[#57f221]">
-            Chakra UI
-          </li>,
-          <li className="flex items-center rounded-full bg-blue-500/20 xl:bg-slate-700/10 group-hover:bg-[rgba(87,_242,_33,_0.10)] px-3 py-1 text-xs font-medium leading-5 transition ease-in-out text-blue-100/50 xl:text-blue-100/40 group-hover:text-[#57f221]">
-            Nest.js
-          </li>,
-          <li className="flex items-center rounded-full bg-blue-500/20 xl:bg-slate-700/10 group-hover:bg-[rgba(87,_242,_33,_0.10)] px-3 py-1 text-xs font-medium leading-5 transition ease-in-out text-blue-100/50 xl:text-blue-100/40 group-hover:text-[#57f221]">
-            Azure
-          </li>,
-          <li className="flex items-center rounded-full bg-blue-500/20 xl:bg-slate-700/10 group-hover:bg-[rgba(87,_242,_33,_0.10)] px-3 py-1 text-xs font-medium leading-5 transition ease-in-out text-blue-100/50 xl:text-blue-100/40 group-hover:text-[#57f221]">
-            Shopify
-          </li>,
-        ],
+            {tag}
+          </li>
+        )),
       },
       {
         technical: true,
@@ -60,35 +47,25 @@ export default function ExperiencesComponent() {
           </h2>
         ),
         date: "2022 - present",
-        achievements: [
-          "Developed main marketing website",
-          "Implement tools to facilitate open source contributions (e2e tests, workflows)",
-          "Integrated different third-party tools (Google API) to front-end",
-          "Supervised the front-end team",
-        ],
-        tags: [
-          <li className="flex items-center rounded-full bg-blue-500/20 xl:bg-slate-700/10 group-hover:bg-yellow-400/10 px-3 py-1 text-xs font-medium leading-5 transition ease-in-out text-blue-100/50 xl:text-blue-100/40 group-hover:text-[#FFD700]">
-            Typescript
-          </li>,
-          <li className="flex items-center rounded-full bg-blue-500/20 xl:bg-slate-700/10 group-hover:bg-yellow-400/10 px-3 py-1 text-xs font-medium leading-5 transition ease-in-out text-blue-100/50 xl:text-blue-100/40 group-hover:text-[#FFD700]">
-            React
-          </li>,
-          <li className="flex items-center rounded-full bg-blue-500/20 xl:bg-slate-700/10 group-hover:bg-yellow-400/10 px-3 py-1 text-xs font-medium leading-5 transition ease-in-out text-blue-100/50 xl:text-blue-100/40 group-hover:text-[#FFD700]">
-            Next.js
-          </li>,
-          <li className="flex items-center rounded-full bg-blue-500/20 xl:bg-slate-700/10 group-hover:bg-yellow-400/10 px-3 py-1 text-xs font-medium leading-5 transition ease-in-out text-blue-100/50 xl:text-blue-100/40 group-hover:text-[#FFD700]">
-            Chakra UI
-          </li>,
-          <li className="flex items-center rounded-full bg-blue-500/20 xl:bg-slate-700/10 group-hover:bg-blue-500/10 px-3 py-1 text-xs font-medium leading-5 transition ease-in-out text-blue-100/50 xl:text-blue-100/40 group-hover:text-[#007aff]">
-            Loopback
-          </li>,
-          <li className="flex items-center rounded-full bg-blue-500/20 xl:bg-slate-700/10 group-hover:bg-blue-500/10 px-3 py-1 text-xs font-medium leading-5 transition ease-in-out text-blue-100/50 xl:text-blue-100/40 group-hover:text-[#007aff]">
-            AWS
-          </li>,
-          <li className="flex items-center rounded-full bg-blue-500/20 xl:bg-slate-700/10 group-hover:bg-blue-500/10 px-3 py-1 text-xs font-medium leading-5 transition ease-in-out text-blue-100/50 xl:text-blue-100/40 group-hover:text-[#007aff]">
-            Google API
-          </li>,
-        ],
+        achievements: t("index.experience.experiences.1.tasks", {
+          returnObjects: true,
+        }) as Array<string>,
+        tags: (
+          t("index.experience.experiences.1.tags", {
+            returnObjects: true,
+          }) as Array<string>
+        ).map((tag, i) => (
+          <li
+            className={cn(
+              "flex items-center rounded-full bg-blue-500/20 xl:bg-slate-700/10 group-hover:bg-yellow-400/10 px-3 py-1 text-xs font-medium leading-5 transition ease-in-out text-blue-100/50 xl:text-blue-100/40 group-hover:text-[#FFD700]",
+              i <= 3
+                ? "group-hover:text-[#FFD700] group-hover:bg-yellow-400/10"
+                : "group-hover:text-[#007aff] group-hover:bg-blue-500/10"
+            )}
+          >
+            {tag}
+          </li>
+        )),
       },
       {
         technical: false,
@@ -100,35 +77,18 @@ export default function ExperiencesComponent() {
           </h2>
         ),
         date: "2022 - present",
-        achievements: [
-          "Responsible for all accounting and financial operations",
-          "Created a complete and new accounting system with Excel",
-          "Managed the association's budget",
-          "Assured the financial stability of the association",
-        ],
-        tags: [
+        achievements: t("index.experience.experiences.2.tasks", {
+          returnObjects: true,
+        }) as Array<string>,
+        tags: (
+          t("index.experience.experiences.2.tags", {
+            returnObjects: true,
+          }) as Array<string>
+        ).map((tag) => (
           <li className="flex items-center rounded-full bg-blue-500/20 xl:bg-slate-700/10 group-hover:bg-slate-500/10 px-3 py-1 text-xs font-medium leading-5 transition ease-in-out text-blue-100/50 xl:text-blue-100/40 group-hover:text-slate-500">
-            Accounting
-          </li>,
-          <li className="flex items-center rounded-full bg-blue-500/20 xl:bg-slate-700/10 group-hover:bg-slate-500/10 px-3 py-1 text-xs font-medium leading-5 transition ease-in-out text-blue-100/50 xl:text-blue-100/40 group-hover:text-slate-500">
-            Finance
-          </li>,
-          <li className="flex items-center rounded-full bg-blue-500/20 xl:bg-slate-700/10 group-hover:bg-slate-500/10 px-3 py-1 text-xs font-medium leading-5 transition ease-in-out text-blue-100/50 xl:text-blue-100/40 group-hover:text-slate-500">
-            Excel
-          </li>,
-          <li className="flex items-center rounded-full bg-blue-500/20 xl:bg-slate-700/10 group-hover:bg-slate-500/10 px-3 py-1 text-xs font-medium leading-5 transition ease-in-out text-blue-100/50 xl:text-blue-100/40 group-hover:text-slate-500">
-            PowerPoint
-          </li>,
-          <li className="flex items-center rounded-full bg-blue-500/20 xl:bg-slate-700/10 group-hover:bg-slate-500/10 px-3 py-1 text-xs font-medium leading-5 transition ease-in-out text-blue-100/50 xl:text-blue-100/40 group-hover:text-slate-500">
-            Communication
-          </li>,
-          <li className="flex items-center rounded-full bg-blue-500/20 xl:bg-slate-700/10 group-hover:bg-slate-500/10 px-3 py-1 text-xs font-medium leading-5 transition ease-in-out text-blue-100/50 xl:text-blue-100/40 group-hover:text-slate-500">
-            Leadership
-          </li>,
-          <li className="flex items-center rounded-full bg-blue-500/20 xl:bg-slate-700/10 group-hover:bg-slate-500/10 px-3 py-1 text-xs font-medium leading-5 transition ease-in-out text-blue-100/50 xl:text-blue-100/40 group-hover:text-slate-500">
-            Logic
-          </li>,
-        ],
+            {tag}
+          </li>
+        )),
       },
       {
         technical: true,
@@ -140,35 +100,18 @@ export default function ExperiencesComponent() {
           </h2>
         ),
         date: "2020 - present",
-        achievements: [
-          "Developed the main marketing website",
-          "Responsible for handling customers requests",
-          "Manage development team to fulfill customers' needs",
-          "Assured the quality of the code as well as the security of our products",
-        ],
-        tags: [
+        achievements: t("index.experience.experiences.3.tasks", {
+          returnObjects: true,
+        }) as Array<string>,
+        tags: (
+          t("index.experience.experiences.3.tags", {
+            returnObjects: true,
+          }) as Array<string>
+        ).map((tag) => (
           <li className="flex items-center rounded-full bg-blue-500/20 xl:bg-slate-700/10 group-hover:bg-cyan-400/10 px-3 py-1 text-xs font-medium leading-5 transition ease-in-out text-blue-100/50 xl:text-blue-100/40 group-hover:text-cyan-500">
-            Typescript
-          </li>,
-          <li className="flex items-center rounded-full bg-blue-500/20 xl:bg-slate-700/10 group-hover:bg-cyan-400/10 px-3 py-1 text-xs font-medium leading-5 transition ease-in-out text-blue-100/50 xl:text-blue-100/40 group-hover:text-cyan-500">
-            React
-          </li>,
-          <li className="flex items-center rounded-full bg-blue-500/20 xl:bg-slate-700/10 group-hover:bg-cyan-400/10 px-3 py-1 text-xs font-medium leading-5 transition ease-in-out text-blue-100/50 xl:text-blue-100/40 group-hover:text-cyan-500">
-            Next.js
-          </li>,
-          <li className="flex items-center rounded-full bg-blue-500/20 xl:bg-slate-700/10 group-hover:bg-cyan-400/10 px-3 py-1 text-xs font-medium leading-5 transition ease-in-out text-blue-100/50 xl:text-blue-100/40 group-hover:text-cyan-500">
-            Nest.js
-          </li>,
-          <li className="flex items-center rounded-full bg-blue-500/20 xl:bg-slate-700/10 group-hover:bg-cyan-400/10 px-3 py-1 text-xs font-medium leading-5 transition ease-in-out text-blue-100/50 xl:text-blue-100/40 group-hover:text-cyan-500">
-            Express.js
-          </li>,
-          <li className="flex items-center rounded-full bg-blue-500/20 xl:bg-slate-700/10 group-hover:bg-cyan-400/10 px-3 py-1 text-xs font-medium leading-5 transition ease-in-out text-blue-100/50 xl:text-blue-100/40 group-hover:text-cyan-500">
-            Docker
-          </li>,
-          <li className="flex items-center rounded-full bg-blue-500/20 xl:bg-slate-700/10 group-hover:bg-cyan-400/10 px-3 py-1 text-xs font-medium leading-5 transition ease-in-out text-blue-100/50 xl:text-blue-100/40 group-hover:text-cyan-500">
-            Nx Workspace
-          </li>,
-        ],
+            {tag}
+          </li>
+        )),
       },
       {
         technical: false,
@@ -180,35 +123,18 @@ export default function ExperiencesComponent() {
           </h2>
         ),
         date: "2020 - present",
-        achievements: [
-          "Advised and helped customers",
-          "Organized the display (merchandising)",
-          "Received and managed product deliveries",
-          "Maintained the reserve",
-        ],
-        tags: [
+        achievements: t("index.experience.experiences.4.tasks", {
+          returnObjects: true,
+        }) as Array<string>,
+        tags: (
+          t("index.experience.experiences.4.tags", {
+            returnObjects: true,
+          }) as Array<string>
+        ).map((tag) => (
           <li className="flex items-center rounded-full bg-blue-500/20 xl:bg-slate-700/10 group-hover:bg-black px-3 py-1 text-xs font-medium leading-5 transition ease-in-out text-blue-100/50 xl:text-blue-100/40 group-hover:text-white">
-            Negociation
-          </li>,
-          <li className="flex items-center rounded-full bg-blue-500/20 xl:bg-slate-700/10 group-hover:bg-black px-3 py-1 text-xs font-medium leading-5 transition ease-in-out text-blue-100/50 xl:text-blue-100/40 group-hover:text-white">
-            Sales
-          </li>,
-          <li className="flex items-center rounded-full bg-blue-500/20 xl:bg-slate-700/10 group-hover:bg-black px-3 py-1 text-xs font-medium leading-5 transition ease-in-out text-blue-100/50 xl:text-blue-100/40 group-hover:text-white">
-            Merchandising
-          </li>,
-          <li className="flex items-center rounded-full bg-blue-500/20 xl:bg-slate-700/10 group-hover:bg-black px-3 py-1 text-xs font-medium leading-5 transition ease-in-out text-blue-100/50 xl:text-blue-100/40 group-hover:text-white">
-            Communication
-          </li>,
-          <li className="flex items-center rounded-full bg-blue-500/20 xl:bg-slate-700/10 group-hover:bg-black px-3 py-1 text-xs font-medium leading-5 transition ease-in-out text-blue-100/50 xl:text-blue-100/40 group-hover:text-white">
-            Teamwork
-          </li>,
-          <li className="flex items-center rounded-full bg-blue-500/20 xl:bg-slate-700/10 group-hover:bg-black px-3 py-1 text-xs font-medium leading-5 transition ease-in-out text-blue-100/50 xl:text-blue-100/40 group-hover:text-white">
-            Empathy
-          </li>,
-          <li className="flex items-center rounded-full bg-blue-500/20 xl:bg-slate-700/10 group-hover:bg-black px-3 py-1 text-xs font-medium leading-5 transition ease-in-out text-blue-100/50 xl:text-blue-100/40 group-hover:text-white">
-            Organization
-          </li>,
-        ],
+            {tag}
+          </li>
+        )),
       },
       {
         technical: false,
@@ -220,34 +146,18 @@ export default function ExperiencesComponent() {
           </h2>
         ),
         date: "2020 - present",
-        achievements: [
-          "Wrote several articles about International Relations, Economics, Human Rights, Environment and Geopolitics",
-          "Participated in several advocacy campaigns",
-          "Researched and analyzed several topics for policy papers",
-        ],
-        tags: [
+        achievements: t("index.experience.experiences.5.tasks", {
+          returnObjects: true,
+        }) as Array<string>,
+        tags: (
+          t("index.experience.experiences.5.tags", {
+            returnObjects: true,
+          }) as Array<string>
+        ).map((tag) => (
           <li className="flex items-center rounded-full bg-blue-500/20 xl:bg-slate-700/10 group-hover:bg-yellow-600/10 px-3 py-1 text-xs font-medium leading-5 transition ease-in-out text-blue-100/50 xl:text-blue-100/40 group-hover:text-yellow-500">
-            Research
-          </li>,
-          <li className="flex items-center rounded-full bg-blue-500/20 xl:bg-slate-700/10 group-hover:bg-yellow-600/10 px-3 py-1 text-xs font-medium leading-5 transition ease-in-out text-blue-100/50 xl:text-blue-100/40 group-hover:text-yellow-500">
-            Analysis
-          </li>,
-          <li className="flex items-center rounded-full bg-blue-500/20 xl:bg-slate-700/10 group-hover:bg-yellow-600/10 px-3 py-1 text-xs font-medium leading-5 transition ease-in-out text-blue-100/50 xl:text-blue-100/40 group-hover:text-yellow-500">
-            Writing
-          </li>,
-          <li className="flex items-center rounded-full bg-blue-500/20 xl:bg-slate-700/10 group-hover:bg-yellow-600/10 px-3 py-1 text-xs font-medium leading-5 transition ease-in-out text-blue-100/50 xl:text-blue-100/40 group-hover:text-yellow-500">
-            Teamwork
-          </li>,
-          <li className="flex items-center rounded-full bg-blue-500/20 xl:bg-slate-700/10 group-hover:bg-yellow-600/10 px-3 py-1 text-xs font-medium leading-5 transition ease-in-out text-blue-100/50 xl:text-blue-100/40 group-hover:text-yellow-500">
-            Critical Thinking
-          </li>,
-          <li className="flex items-center rounded-full bg-blue-500/20 xl:bg-slate-700/10 group-hover:bg-yellow-600/10 px-3 py-1 text-xs font-medium leading-5 transition ease-in-out text-blue-100/50 xl:text-blue-100/40 group-hover:text-yellow-500">
-            Logic
-          </li>,
-          <li className="flex items-center rounded-full bg-blue-500/20 xl:bg-slate-700/10 group-hover:bg-yellow-600/10 px-3 py-1 text-xs font-medium leading-5 transition ease-in-out text-blue-100/50 xl:text-blue-100/40 group-hover:text-yellow-500">
-            Reasoning
-          </li>,
-        ],
+            {tag}
+          </li>
+        )),
       },
       {
         technical: true,
@@ -259,35 +169,18 @@ export default function ExperiencesComponent() {
           </h2>
         ),
         date: "2021-2022",
-        achievements: [
-          "Responsible for all frontend and backend development demands",
-          "Developed >20 websites, dashboards for all platforms",
-          "Implemented an e-commerce website for the company",
-          "Handled all the company's servers, databases and finished products",
-        ],
-        tags: [
+        achievements: t("index.experience.experiences.6.tasks", {
+          returnObjects: true,
+        }) as Array<string>,
+        tags: (
+          t("index.experience.experiences.6.tags", {
+            returnObjects: true,
+          }) as Array<string>
+        ).map((tag) => (
           <li className="flex items-center rounded-full bg-blue-500/20 xl:bg-slate-700/10 group-hover:bg-blue-400/10 px-3 py-1 text-xs font-medium leading-5 transition ease-in-out text-blue-100/50 xl:text-blue-100/40 group-hover:text-blue-500">
-            Typescript
-          </li>,
-          <li className="flex items-center rounded-full bg-blue-500/20 xl:bg-slate-700/10 group-hover:bg-blue-400/10 px-3 py-1 text-xs font-medium leading-5 transition ease-in-out text-blue-100/50 xl:text-blue-100/40 group-hover:text-blue-500">
-            React
-          </li>,
-          <li className="flex items-center rounded-full bg-blue-500/20 xl:bg-slate-700/10 group-hover:bg-blue-400/10 px-3 py-1 text-xs font-medium leading-5 transition ease-in-out text-blue-100/50 xl:text-blue-100/40 group-hover:text-blue-500">
-            Vue.js
-          </li>,
-          <li className="flex items-center rounded-full bg-blue-500/20 xl:bg-slate-700/10 group-hover:bg-blue-400/10 px-3 py-1 text-xs font-medium leading-5 transition ease-in-out text-blue-100/50 xl:text-blue-100/40 group-hover:text-blue-500">
-            Svelte
-          </li>,
-          <li className="flex items-center rounded-full bg-blue-500/20 xl:bg-slate-700/10 group-hover:bg-blue-400/10 px-3 py-1 text-xs font-medium leading-5 transition ease-in-out text-blue-100/50 xl:text-blue-100/40 group-hover:text-blue-500">
-            Express.js
-          </li>,
-          <li className="flex items-center rounded-full bg-blue-500/20 xl:bg-slate-700/10 group-hover:bg-blue-400/10 px-3 py-1 text-xs font-medium leading-5 transition ease-in-out text-blue-100/50 xl:text-blue-100/40 group-hover:text-blue-500">
-            Github
-          </li>,
-          <li className="flex items-center rounded-full bg-blue-500/20 xl:bg-slate-700/10 group-hover:bg-blue-400/10 px-3 py-1 text-xs font-medium leading-5 transition ease-in-out text-blue-100/50 xl:text-blue-100/40 group-hover:text-blue-500">
-            Turborepo
-          </li>,
-        ],
+            {tag}
+          </li>
+        )),
       },
       {
         technical: false,
@@ -299,34 +192,18 @@ export default function ExperiencesComponent() {
           </h2>
         ),
         date: "2020 - present",
-        achievements: [
-          "Organized multiple Model United Nations across the world",
-          "Participated in different Model United Nations",
-          "Won multiple awards and recognitions",
-        ],
-        tags: [
+        achievements: t("index.experience.experiences.7.tasks", {
+          returnObjects: true,
+        }) as Array<string>,
+        tags: (
+          t("index.experience.experiences.7.tags", {
+            returnObjects: true,
+          }) as Array<string>
+        ).map((tag) => (
           <li className="flex items-center rounded-full bg-blue-500/20 xl:bg-slate-700/10 group-hover:bg-blue-400/10 px-3 py-1 text-xs font-medium leading-5 transition ease-in-out text-blue-100/50 xl:text-blue-100/40 group-hover:text-blue-400">
-            Public Speaking
-          </li>,
-          <li className="flex items-center rounded-full bg-blue-500/20 xl:bg-slate-700/10 group-hover:bg-blue-400/10 px-3 py-1 text-xs font-medium leading-5 transition ease-in-out text-blue-100/50 xl:text-blue-100/40 group-hover:text-blue-400">
-            Debating
-          </li>,
-          <li className="flex items-center rounded-full bg-blue-500/20 xl:bg-slate-700/10 group-hover:bg-blue-400/10 px-3 py-1 text-xs font-medium leading-5 transition ease-in-out text-blue-100/50 xl:text-blue-100/40 group-hover:text-blue-400">
-            Leadership
-          </li>,
-          <li className="flex items-center rounded-full bg-blue-500/20 xl:bg-slate-700/10 group-hover:bg-blue-400/10 px-3 py-1 text-xs font-medium leading-5 transition ease-in-out text-blue-100/50 xl:text-blue-100/40 group-hover:text-blue-400">
-            Teamwork
-          </li>,
-          <li className="flex items-center rounded-full bg-blue-500/20 xl:bg-slate-700/10 group-hover:bg-blue-400/10 px-3 py-1 text-xs font-medium leading-5 transition ease-in-out text-blue-100/50 xl:text-blue-100/40 group-hover:text-blue-400">
-            Bureaucracy
-          </li>,
-          <li className="flex items-center rounded-full bg-blue-500/20 xl:bg-slate-700/10 group-hover:bg-blue-400/10 px-3 py-1 text-xs font-medium leading-5 transition ease-in-out text-blue-100/50 xl:text-blue-100/40 group-hover:text-blue-400">
-            Parliamentary Procedures
-          </li>,
-          <li className="flex items-center rounded-full bg-blue-500/20 xl:bg-slate-700/10 group-hover:bg-blue-400/10 px-3 py-1 text-xs font-medium leading-5 transition ease-in-out text-blue-100/50 xl:text-blue-100/40 group-hover:text-blue-400">
-            Research
-          </li>,
-        ],
+            {tag}
+          </li>
+        )),
       },
     ],
     []
@@ -342,7 +219,9 @@ export default function ExperiencesComponent() {
           checked={showNonTech}
           onClick={() => setShowNonTech((prev) => !prev)}
         />
-        <label htmlFor="non-tech-switch">Show non-tech experience</label>
+        <label htmlFor="non-tech-switch">
+          {t("index.experience.showAllButton")}
+        </label>
       </div>
       <div>
         {experiences.map((experience, id) => (
