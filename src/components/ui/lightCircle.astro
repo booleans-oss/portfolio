@@ -1,0 +1,16 @@
+---
+export interface Props {
+    class: string;
+}
+
+import { cn } from "../../lib/utils";
+
+const { class: className } = Astro.props;
+
+const classes = cn(
+    "h-[150px] w-[150px] fixed bg-blue-500/90 blur-[150px] rounded-full",
+    className
+);
+---
+
+<div class={classes}></div>

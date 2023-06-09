@@ -1,0 +1,21 @@
+---
+---
+
+<div
+  class="mouse pointer-events-none fixed inset-0 z-30 transition duration-300 lg:fixed top-0 left-0"
+>
+</div>
+
+<script>
+  const mouse = document.querySelector<HTMLDivElement>(".mouse");
+  const handleMouseMove = (event: MouseEvent) => {
+    const x = event.pageX;
+    const y = event.pageY;
+
+    if (!mouse) return;
+
+    mouse.style.background = `radial-gradient(600px at ${x}px ${y}px, rgba(156, 187, 255, 0.1), transparent 80%)`;
+  };
+
+  document.addEventListener("mousemove", handleMouseMove);
+</script>

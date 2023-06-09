@@ -1,81 +1,128 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import Layout from "../layouts/Layout.astro";
+import MouseSpotlight from "../components/mouseSpotlight.astro";
+import ExperiencesComponent from "../components/experiences";
+import Noise from "../components/ui/noise.astro";
+import BackgroundLight from "../components/ui/backgroundLight.astro";
+import LightCircle from "../components/ui/lightCircle.astro";
+import AboutSection from "../components/about.astro";
+import ProfilePicture from "../components/ui/profilePicture.astro";
+import SocialLink from "../components/ui/socialLink.astro";
+import LinkedInIcon from "../icones/LinkedIn.astro";
+import GithubIcon from "../icones/Github.astro";
+import PolyworkIcon from "../icones/Polywork.astro";
 ---
 
-<Layout title="Welcome to Astro.">
-	<main>
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
-		<p class="instructions">
-			To get started, open the directory <code>src/pages</code> in your project.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p>
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
-			/>
-			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				title="Community"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
-		</ul>
-	</main>
-</Layout>
+<Layout title="Clement | Software Engineer">
+    <MouseSpotlight />
+    <main class="w-screen h-screen">
+        <Noise />
+        <div
+            class="z-10 grid grid-cols-[1fr,min(640px,100%),1fr] px-10 font-sans text-base text-blue-100/90 xl:grid-cols-[1fr,min(440px,100%),min(560px,100%),1fr] xl:gap-x-40 xl:px-0 space-y-10 xl:space-y-0"
+        >
+            <div
+                class="flex flex-col justify-between h-full xl:h-screen py-24 pb-0 xl:pb-24 4 col-start-2 gap-10 relative xl:sticky top-auto xl:top-0"
+            >
+                <div>
+                    <div class="flex gap-4 xl:gap-6 items-center">
+                        <ProfilePicture url="/assets/pp.jpg" />
+                        <div>
+                            <h1 class="text-4xl font-medium text-blue-100/80">
+                                Clement
+                            </h1>
+                            <h2 class="text-lg text-blue-100/50 leading-7">
+                                Developpeur Fullstack @{" "}
+                                <span class="text-blue-100/80 italic"
+                                    >RESPONSIBLE</span
+                                >
+                            </h2>
+                        </div>
+                    </div>
+                    <p class="text-lg text-blue-100/70 mt-12">
+                        I build <span class="text-blue-100/90">accessible</span
+                        >,{" "}
+                        <span class="text-blue-100/90">inclusive</span> websites
+                        and applications, from scratch and with a focus on
+                        <span class="text-blue-100/90">performance</span>. I
+                        want to create <span class="text-blue-100/90"
+                            >experiences</span
+                        > for the web.
+                    </p>
+                    <div class="mt-12">
+                        <div
+                            class="group flex items-center gap-4 cursor-pointer"
+                        >
+                            <div
+                                class="h-px w-8 bg-blue-100/70 transition-all duration-100 ease-in-out group-hover:w-16"
+                            >
+                            </div>
+                            <h2
+                                class="uppercase text-md text-blue-100/70 group-hover:text-blue-100/90 group-hover:font-semibold"
+                            >
+                                About
+                            </h2>
+                        </div>
+                        <div
+                            class="group flex items-center gap-4 cursor-pointer mt-2"
+                        >
+                            <div
+                                class="h-px w-8 bg-blue-100/70 transition-all duration-100 ease-in-out group-hover:w-16"
+                            >
+                            </div>
+                            <h2
+                                class="uppercase text-md text-blue-100/70 group-hover:text-blue-100/90 group-hover:font-semibold"
+                            >
+                                Experience
+                            </h2>
+                        </div>
+                        <div
+                            class="flex group items-center gap-4 cursor-pointer mt-2"
+                        >
+                            <div
+                                class="h-px w-8 bg-blue-100/70 transition-all duration-100 ease-in-out group-hover:w-16"
+                            >
+                            </div>
+                            <h2
+                                class="uppercase text-md text-blue-100/70 group-hover:text-blue-100/90 group-hover:font-semibold"
+                            >
+                                Projects
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="flex gap-4 text-md text-blue-100/90 font-semibold flex-wrap"
+                >
+                    <SocialLink
+                        url="https://linkedin.com/clement-lebon"
+                        name="LinkedIn"
+                    >
+                        <LinkedInIcon class="h-6 w-6" />
+                    </SocialLink>
+                    <SocialLink
+                        url="https://github.com/booleans-oss"
+                        name="Github"
+                    >
+                        <GithubIcon class="h-6 w-6" />
+                    </SocialLink>
+                    <SocialLink
+                        url="https://poly.me/clementlbn"
+                        name="Polywork"
+                    >
+                        <PolyworkIcon class="h-6 w-6" />
+                    </SocialLink>
+                </div>
+            </div>
+            <div
+                class="w-full col-start-2 xl:col-start-3 space-y-20 py-24 pt-0 xl:pt-24"
+            >
+                <AboutSection />
+                <ExperiencesComponent client:load />
+            </div>
 
-<style>
-	main {
-		margin: auto;
-		padding: 1.5rem;
-		max-width: 60ch;
-	}
-	h1 {
-		font-size: 3rem;
-		font-weight: 800;
-		margin: 0;
-	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.instructions {
-		line-height: 1.6;
-		margin: 1rem 0;
-		border: 1px solid rgba(var(--accent), 25%);
-		background-color: white;
-		padding: 1rem;
-		border-radius: 0.4rem;
-	}
-	.instructions code {
-		font-size: 0.875em;
-		font-weight: bold;
-		background: rgba(var(--accent), 12%);
-		color: rgb(var(--accent));
-		border-radius: 4px;
-		padding: 0.3em 0.45em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 1rem;
-		padding: 0;
-	}
-</style>
+            <LightCircle class="top-0 left-0" />
+            <LightCircle class="bottom-0 right-0" />
+            <BackgroundLight />
+        </div>
+    </main>
+</Layout>
