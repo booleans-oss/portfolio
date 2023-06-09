@@ -38,7 +38,7 @@ export default function ExperiencesComponent() {
         title: (
           <h2 className="text-blue-100/90 font-medium">
             <span className="text-blue-100/90 group-hover:text-[#FFD700] transition">
-              Software Engineer ·{" "}
+            {t("index.experience.experiences.1.title")} ·{" "}
             </span>
             <span className="text-blue-100/90 group-hover:text-[#007aff]">
               StandForUA
@@ -72,7 +72,7 @@ export default function ExperiencesComponent() {
         link: "https://www.instagram.com/inswear_bdx/",
         title: (
           <h2 className="text-blue-100/90 font-medium group-hover:text-slate-500 transition">
-            Treasurer · INS'WEAR{" "}
+            {t("index.experience.experiences.2.title")} · INS'WEAR{" "}
             <ExternalArrow className="inline h-4 w-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition" />
           </h2>
         ),
@@ -95,7 +95,7 @@ export default function ExperiencesComponent() {
         link: "https://github.com/development-community",
         title: (
           <h2 className="text-blue-100/90 font-medium group-hover:text-cyan-500">
-            Chief Technical Officer · Development Community
+            {t("index.experience.experiences.3.title")} · Development Community
             <ExternalArrow className="inline h-4 w-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition" />
           </h2>
         ),
@@ -118,7 +118,7 @@ export default function ExperiencesComponent() {
         link: "https://pvh.com/",
         title: (
           <h2 className="text-blue-100/90 font-medium group-hover:text-white group-hover:bg-black w-fit px-0 xl:group-hover:px-8">
-            Sales Intern · PVH Corp.{" "}
+            {t("index.experience.experiences.4.title")} · PVH Corp.{" "}
             <ExternalArrow className="inline h-4 w-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition" />
           </h2>
         ),
@@ -141,7 +141,7 @@ export default function ExperiencesComponent() {
         link: "https://www.policyinitiatives.org/",
         title: (
           <h2 className="text-blue-100/90 font-medium group-hover:text-yellow-500 w-fit">
-            Policy Analyst · The Policy Initiatives Institute.
+            {t("index.experience.experiences.5.title")} · The Policy Initiatives Institute.
             <ExternalArrow className="inline h-4 w-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition" />
           </h2>
         ),
@@ -164,7 +164,7 @@ export default function ExperiencesComponent() {
         link: "https://aysdiscord.com/",
         title: (
           <h2 className="text-blue-100/90 font-medium group-hover:text-blue-500">
-            Software Engineer · Advertise Your Server
+            {t("index.experience.experiences.6.title")} · Advertise Your Server
             <ExternalArrow className="inline h-4 w-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition" />
           </h2>
         ),
@@ -187,7 +187,7 @@ export default function ExperiencesComponent() {
         link: "https://www.un.org/en/mun",
         title: (
           <h2 className="text-blue-100/90 font-medium group-hover:text-blue-400 w-fit">
-            President · Model United Nations.
+            {t("index.experience.experiences.7.title")} · Model United Nations.
             <ExternalArrow className="inline h-4 w-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition" />
           </h2>
         ),
