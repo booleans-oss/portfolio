@@ -348,7 +348,7 @@ export default function ExperiencesComponent() {
         {experiences.map((experience, id) => (
           <a
             key={id}
-            href="https://www.responsible.us/"
+            href={experience.link}
             target="_blank"
             rel="noopener noreferrer"
             className={showNonTech || experience.technical ? "block" : "hidden"}
