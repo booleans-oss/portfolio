@@ -47,7 +47,7 @@ export default function ExperiencesComponent() {
       },
       {
         technical: true,
-        link: "https://www.responsible.us/",
+        link: "https://www.standforua.org/",
         title: (
           <h2 className="text-blue-100/90 font-medium">
             <span className="text-blue-100/90 group-hover:text-[#FFD700] transition">
@@ -92,7 +92,7 @@ export default function ExperiencesComponent() {
       },
       {
         technical: false,
-        link: "https://www.responsible.us/",
+        link: "https://www.instagram.com/inswear_bdx/",
         title: (
           <h2 className="text-blue-100/90 font-medium group-hover:text-slate-500 transition">
             Treasurer · INS'WEAR{" "}
@@ -132,7 +132,7 @@ export default function ExperiencesComponent() {
       },
       {
         technical: true,
-        link: "https://www.responsible.us/",
+        link: "https://github.com/development-community",
         title: (
           <h2 className="text-blue-100/90 font-medium group-hover:text-cyan-500">
             Chief Technical Officer · Development Community
@@ -172,7 +172,7 @@ export default function ExperiencesComponent() {
       },
       {
         technical: false,
-        link: "https://www.responsible.us/",
+        link: "https://pvh.com/",
         title: (
           <h2 className="text-blue-100/90 font-medium group-hover:text-white group-hover:bg-black w-fit px-0 xl:group-hover:px-8">
             Sales Intern · PVH Corp.{" "}
@@ -212,7 +212,7 @@ export default function ExperiencesComponent() {
       },
       {
         technical: false,
-        link: "https://www.responsible.us/",
+        link: "https://www.policyinitiatives.org/",
         title: (
           <h2 className="text-blue-100/90 font-medium group-hover:text-yellow-500 w-fit">
             Policy Analyst · The Policy Initiatives Institute.
@@ -251,7 +251,7 @@ export default function ExperiencesComponent() {
       },
       {
         technical: true,
-        link: "https://www.responsible.us/",
+        link: "https://aysdiscord.com/",
         title: (
           <h2 className="text-blue-100/90 font-medium group-hover:text-blue-500">
             Software Engineer · Advertise Your Server
@@ -291,7 +291,7 @@ export default function ExperiencesComponent() {
       },
       {
         technical: false,
-        link: "https://www.responsible.us/",
+        link: "https://www.un.org/en/mun",
         title: (
           <h2 className="text-blue-100/90 font-medium group-hover:text-blue-400 w-fit">
             President · Model United Nations.
