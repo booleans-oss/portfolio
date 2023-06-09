@@ -18,7 +18,6 @@ export default function LanguageSelector() {
   return (
     <Select
       onValueChange={(newValue) => {
-        i18n.changeLanguage(newValue);
         window.location.href = newValue === "en" ? "/" : "/fr";
       }}
     >
