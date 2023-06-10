@@ -9,8 +9,7 @@ import {
 import PrintIcon from "../icones/Print";
 import RightArrow from "../icones/RightArrow";
 import { useTranslation } from "react-i18next";
-import { useEffect, useMemo, useRef, useState } from "react";
-import { useReactToPrint } from "react-to-print";
+import { useEffect, useMemo, useState } from "react";
 import LanguageSelector from "./languageSelector";
 import { cn } from "../lib/utils";
 
@@ -74,13 +73,7 @@ const allTags = [
 
 export default function PrintableView() {
   const { t, i18n } = useTranslation();
-  const printableDocument = useRef<HTMLDivElement>(null);
-
   const [activeTag, setActiveTag] = useState<string | null>(null);
-
-  const handlePrint = useReactToPrint({
-    content: () => printableDocument.current,
-  });
 
   const experiences = useMemo(
     () =>
@@ -127,18 +120,17 @@ export default function PrintableView() {
           <RightArrow className="w-5 h-5 inline-block mr-2 rotate-180 group-hover:-translate-x-2 transition duration-3 ease-in-out" />
           {t("cv.goBackButton")}
         </a>
-        <button
-          onClick={handlePrint}
+        <a
+          href={`/cv_${i18n.language}.pdf`}
+          target="_blank"
+          rel="noreferrer"
           className="text-blue-100/50 flex gap-2 items-center rounded-full border border-blue-100/50 px-4 py-2 text-sm uppercase font-semibold hover:text-blue-100/90 transition duration-300 ease-in-out"
         >
           <PrintIcon className="inline h-4 w-4" />
           {t("cv.downloadButton")}
-        </button>
+        </a>
       </div>
-      <div
-        className="w-full xl:w-[1000px] h-full bg-background p-8 space-y-12"
-        ref={printableDocument}
-      >
+      <div className="w-full xl:w-[1000px] h-full bg-background p-8 space-y-12">
         <div className="flex flex-col xl:flex-row items-start justify-between xl:items-center border-b border-black pb-10">
           <div>
             <h1 className="text-4xl font-black tracking-tighter">
