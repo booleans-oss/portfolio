@@ -306,7 +306,7 @@ export default function PrintableView() {
                     <h4 className="text-sm text-zinc-700/70">
                       {experience.title} | {experience.date}
                     </h4>
-                    <ul className="list-disc list-inside text-sm">
+                    <ul className="list-disc list-outside ml-3 text-sm">
                       {experience.tasks.map((task) => (
                         <li key={task}>{task}</li>
                       ))}
