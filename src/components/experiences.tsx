@@ -27,7 +27,7 @@ export default function ExperiencesComponent() {
             returnObjects: true,
           }) as Array<string>
         ).map((tag) => (
-          <li className="flex items-center rounded-full bg-blue-500/20 xl:bg-slate-700/10 group-hover:bg-[rgba(87,_242,_33,_0.10)] px-3 py-1 text-xs font-medium leading-5 transition ease-in-out text-blue-100/50 xl:text-blue-100/40 group-hover:text-[#57f221]">
+          <li className="flex items-center rounded-full bg-blue-500/20 xl:bg-slate-700/10 group-hover:bg-[rgba(87,_242,_33,_0.10)] px-3 py-1 text-sm font-medium leading-5 transition ease-in-out text-blue-100/50 xl:text-blue-100/40 group-hover:text-[#57f221]">
             {tag}
           </li>
         )),
@@ -57,7 +57,7 @@ export default function ExperiencesComponent() {
         ).map((tag, i) => (
           <li
             className={cn(
-              "flex items-center rounded-full bg-blue-500/20 xl:bg-slate-700/10 group-hover:bg-yellow-400/10 px-3 py-1 text-xs font-medium leading-5 transition ease-in-out text-blue-100/50 xl:text-blue-100/40 group-hover:text-[#FFD700]",
+              "flex items-center rounded-full bg-blue-500/20 xl:bg-slate-700/10 group-hover:bg-yellow-400/10 px-3 py-1 text-sm font-medium leading-5 transition ease-in-out text-blue-100/50 xl:text-blue-100/40 group-hover:text-[#FFD700]",
               i <= 3
                 ? "group-hover:text-[#FFD700] group-hover:bg-yellow-400/10"
                 : "group-hover:text-[#007aff] group-hover:bg-blue-500/10"
@@ -85,7 +85,7 @@ export default function ExperiencesComponent() {
             returnObjects: true,
           }) as Array<string>
         ).map((tag) => (
-          <li className="flex items-center rounded-full bg-blue-500/20 xl:bg-slate-700/10 group-hover:bg-slate-500/10 px-3 py-1 text-xs font-medium leading-5 transition ease-in-out text-blue-100/50 xl:text-blue-100/40 group-hover:text-slate-500">
+          <li className="flex items-center rounded-full bg-blue-500/20 xl:bg-slate-700/10 group-hover:bg-slate-500/10 px-3 py-1 text-sm font-medium leading-5 transition ease-in-out text-blue-100/50 xl:text-blue-100/40 group-hover:text-slate-500">
             {tag}
           </li>
         )),
@@ -108,7 +108,7 @@ export default function ExperiencesComponent() {
             returnObjects: true,
           }) as Array<string>
         ).map((tag) => (
-          <li className="flex items-center rounded-full bg-blue-500/20 xl:bg-slate-700/10 group-hover:bg-cyan-400/10 px-3 py-1 text-xs font-medium leading-5 transition ease-in-out text-blue-100/50 xl:text-blue-100/40 group-hover:text-cyan-500">
+          <li className="flex items-center rounded-full bg-blue-500/20 xl:bg-slate-700/10 group-hover:bg-cyan-400/10 px-3 py-1 text-sm font-medium leading-5 transition ease-in-out text-blue-100/50 xl:text-blue-100/40 group-hover:text-cyan-500">
             {tag}
           </li>
         )),
@@ -131,7 +131,7 @@ export default function ExperiencesComponent() {
             returnObjects: true,
           }) as Array<string>
         ).map((tag) => (
-          <li className="flex items-center rounded-full bg-blue-500/20 xl:bg-slate-700/10 group-hover:bg-black px-3 py-1 text-xs font-medium leading-5 transition ease-in-out text-blue-100/50 xl:text-blue-100/40 group-hover:text-white">
+          <li className="flex items-center rounded-full bg-blue-500/20 xl:bg-slate-700/10 group-hover:bg-black px-3 py-1 text-sm font-medium leading-5 transition ease-in-out text-blue-100/50 xl:text-blue-100/40 group-hover:text-white">
             {tag}
           </li>
         )),
@@ -154,7 +154,7 @@ export default function ExperiencesComponent() {
             returnObjects: true,
           }) as Array<string>
         ).map((tag) => (
-          <li className="flex items-center rounded-full bg-blue-500/20 xl:bg-slate-700/10 group-hover:bg-yellow-600/10 px-3 py-1 text-xs font-medium leading-5 transition ease-in-out text-blue-100/50 xl:text-blue-100/40 group-hover:text-yellow-500">
+          <li className="flex items-center rounded-full bg-blue-500/20 xl:bg-slate-700/10 group-hover:bg-yellow-600/10 px-3 py-1 text-sm font-medium leading-5 transition ease-in-out text-blue-100/50 xl:text-blue-100/40 group-hover:text-yellow-500">
             {tag}
           </li>
         )),
@@ -177,7 +177,7 @@ export default function ExperiencesComponent() {
             returnObjects: true,
           }) as Array<string>
         ).map((tag) => (
-          <li className="flex items-center rounded-full bg-blue-500/20 xl:bg-slate-700/10 group-hover:bg-blue-400/10 px-3 py-1 text-xs font-medium leading-5 transition ease-in-out text-blue-100/50 xl:text-blue-100/40 group-hover:text-blue-500">
+          <li className="flex items-center rounded-full bg-blue-500/20 xl:bg-slate-700/10 group-hover:bg-blue-400/10 px-3 py-1 text-sm font-medium leading-5 transition ease-in-out text-blue-100/50 xl:text-blue-100/40 group-hover:text-blue-500">
             {tag}
           </li>
         )),
@@ -200,7 +200,7 @@ export default function ExperiencesComponent() {
             returnObjects: true,
           }) as Array<string>
         ).map((tag) => (
-          <li className="flex items-center rounded-full bg-blue-500/20 xl:bg-slate-700/10 group-hover:bg-blue-400/10 px-3 py-1 text-xs font-medium leading-5 transition ease-in-out text-blue-100/50 xl:text-blue-100/40 group-hover:text-blue-400">
+          <li className="flex items-center rounded-full bg-blue-500/20 xl:bg-slate-700/10 group-hover:bg-blue-400/10 px-3 py-1 text-sm font-medium leading-5 transition ease-in-out text-blue-100/50 xl:text-blue-100/40 group-hover:text-blue-400">
             {tag}
           </li>
         )),
@@ -213,7 +213,7 @@ export default function ExperiencesComponent() {
 
   return (
     <div className="flex flex-col gap-2 mt-24">
-      <div className="flex items-center space-x-2 float-right justify-end text-sm font-semibold text-blue-100/70">
+      <div className="flex items-center space-x-2 float-right justify-end text-sm text-blue-100/70">
         <Switch
           id="non-tech-switch"
           checked={showNonTech}
@@ -233,12 +233,12 @@ export default function ExperiencesComponent() {
             className={showNonTech || experience.technical ? "block" : "hidden"}
           >
             <div className="flex flex-col xl:flex-row gap-4 xl:gap-8 items-start justify-start group hover:bg-slate-800/50 transition duration-100 ease-in-out p-8 pr-0 xl:pr-8 rounded-md -ml-8 border-t hover:border-white/10 border-transparent">
-              <div className="text-xs text-blue-100/50 uppercase font-medium w-32 whitespace-nowrap">
+              <div className="text-sm text-blue-100/50 uppercase font-semibold w-32 whitespace-nowrap">
                 {experience.date}
               </div>
-              <div className="space-y-2 -mt-[5px]">
+              <div className="space-y-2 -mt-[2.5px]">
                 {experience.title}
-                <ul className="list-none text-blue-100/70 text-md xl:text-sm space-y-1">
+                <ul className="list-none text-blue-100/70 text-md space-y-1">
                   {experience.achievements.map((achievement, id) => (
                     <li key={id}>{achievement}</li>
                   ))}

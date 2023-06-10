@@ -1,0 +1,20 @@
+---
+import { changeLanguage } from "i18next";
+import PrintableView from "../components/printableView";
+import BackgroundLight from "../components/ui/backgroundLight.astro";
+import LightCircle from "../components/ui/lightCircle.astro";
+import Noise from "../components/ui/noise.astro";
+import Layout from "../layouts/Layout.astro";
+
+changeLanguage("en");
+---
+
+<Layout>
+    <Noise />
+    <LightCircle class="top-0 left-0" />
+    <LightCircle class="bottom-0 right-0" />
+    <BackgroundLight
+        class="fixed -top-10 left-40 w-screen hidden xl:block -z-10"
+    />
+    <PrintableView client:load />
+</Layout>

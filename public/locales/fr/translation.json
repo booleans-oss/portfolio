@@ -11,7 +11,10 @@
   "index": {
     "presentation": {
       "role": "Développeur Fullstack",
-      "description": "Je construis des sites web et applications <0>accessibles</0> et <1>inclusives</1>, de A à Z, en gardant toujours à l'esprit les <2>performances</2>. Je souhaite créer des <3>expériences</3> sur le web."
+      "description": "Je construis des sites web et applications <0>accessibles</0> et <1>inclusives</1>, de A à Z, en gardant toujours à l'esprit les <2>performances</2>. Je souhaite créer des <3>expériences</3> sur le web.",
+      "cvStart": "N'hésitez pas à aller regarder",
+      "cvEnd": "mon CV imprimable",
+      "booking": "Si vous voulez discuter avec moi, réservez une session"
     },
     "tree": {
       "about": "À propos",
@@ -166,6 +169,125 @@
             "Bureaucratie",
             "Procédures parlementaires",
             "Recherche"
+          ]
+        }
+      ]
+    }
+  },
+  "cv": {
+    "goBackButton": "Retour",
+    "downloadButton": "Télécharger / Imprimer",
+    "skills": {
+      "title": "Compétences",
+      "databases": "Bases de données"
+    },
+    "education": {
+      "title": "Éducation",
+      "degree": "Bachelor en Business Administration",
+      "highSchoolDegree": "Baccalauréat International"
+    },
+    "experience": {
+      "title": "Experience",
+      "experiences": [
+        {
+          "url": "https://www.getresponsible.com/",
+          "company": "Responsible",
+          "title": "Développeur Fullstack",
+          "date": "2022 - Présent",
+          "tasks": [
+            "Développé du code de production robuste et de haute qualité pour une diversité de projets pour des clients tels que RAINS",
+            "Travailler avec des directeurs créatifs pour mener la recherche, le développement et l'architecture de solutions techniques répondant aux exigences de l'entreprise",
+            "Collaborer avec des designers, des chefs de projet et d'autres ingénieurs pour transformer les concepts créatifs en réalité pour les clients et les parties prenantes",
+            "Diriger et faciliter des initiatives d'accessibilité dans l'ensemble de l'entreprise, telles que la documentation technique des meilleures pratiques et la formation de lecteurs d'écran"
+          ],
+          "tags": [
+            "Typescript",
+            "Javascript",
+            "React",
+            "Next.js",
+            "Chakra UI",
+            "Nest.js",
+            "PostgreSQL",
+            "Azure",
+            "Shopify",
+            "OpenAPI",
+            "Elastic",
+            "Figma"
+          ]
+        },
+        {
+          "url": "https://www.standforua.org/",
+          "company": "StandForUA",
+          "title": "Développeur Fullstack",
+          "date": "2022 - Présent",
+          "tasks": [
+            "Développé et stylisé les principales applications web pour les campagnes de marketing avec le stack: Next.js et Chakra UI",
+            "Construit et expédié plusieurs fonctionnalités et extensions en utilisant des intégrations d'API tierces et internes (OpenAPI, Swagger, etc..)",
+            "Conçu et mis en œuvre l'interface utilisateur depuis la connexion jusqu'à la contribution aux demandes et la création de demandes",
+            "Contribué de manière importante à la mise en œuvre de plusieurs plugins de Google API (Maps, géolocalisation, etc.)"
+          ],
+          "tags": [
+            "Typescript",
+            "Javascript",
+            "React",
+            "Next.js",
+            "Chakra UI",
+            "Loopback",
+            "PostgreSQL",
+            "AWS",
+            "Google API",
+            "OpenAPI",
+            "Figma",
+            "Google Analytics"
+          ]
+        },
+        {
+          "url": "https://github.com/development-community",
+          "company": "Development Community",
+          "title": "Directeur Technique",
+          "date": "2020 - Présent",
+          "tasks": [
+            "Collaboré avec d'autres étudiants ingénieurs sur des projets visant à créer de nouvelles applications web pour des clients et des organisations de la communauté",
+            "Proposé et mis en œuvre des solutions évolutives pour simplifier la communication avec nos clients, notamment la création d'une plateforme commerciale et de chat complètement autonome",
+            "Géré l'ensemble du département technique de l'organisation, des designers aux ingénieurs en passant par les membres de l'assurance qualité",
+            "Conçu plusieurs outils et frameworks pour assurer la qualité de nos produits afin d'augmenter la qualité de livraison globale de l'équipe"
+          ],
+          "tags": [
+            "Typescript",
+            "Javascript",
+            "React",
+            "Vue",
+            "TailwindCSS",
+            "MySQL",
+            "Adobe XD",
+            "Nx Workspace",
+            "AWS",
+            "Nest.js"
+          ]
+        },
+        {
+          "url": "https://aysdiscord.com/",
+          "company": "Advertise Your Server",
+          "title": "Software Engineer",
+          "date": "2020 - 2022",
+          "tasks": [
+            "Développé, maintenu et expédié du code de production pour les applications web de clients principalement en utilisant React, Next.js et TailwindCSS",
+            "Effectué des tests d'assurance qualité sur différents sites pour assurer la compatibilité inter-navigateurs et la réactivité mobile",
+            "Construit et livré des solutions techniques conformes aux exigences des clients",
+            "Assuré la livraison complète de tous les projets frontend par les équipes techniques, depuis la compréhension des besoins des clients jusqu'à l'assurance qualité des codes de collègues."
+          ],
+          "tags": [
+            "Typescript",
+            "Javascript",
+            "React",
+            "Next.js",
+            "TailwindCSS",
+            "MongoDB",
+            "Turborepo",
+            "Express.js",
+            "Svelte",
+            "Docker",
+            "Terraform"
           ]
         }
       ]

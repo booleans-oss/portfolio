@@ -8,8 +8,12 @@ import {
 } from "./ui/select";
 import { useMemo } from "react";
 
-export default function LanguageSelector() {
+export default function LanguageSelector({ onChange }: { onChange?: (newValue: string) => void}) {
   const { i18n } = useTranslation();
+
+  const onValueChange = onChange ?? ((newValue: string) => {
+    window.location.href = newValue === "en" ? "/" : "/fr";
+  });
 
   const emojis = useMemo(
     () => ({
@@ -21,9 +25,7 @@ export default function LanguageSelector() {
 
   return (
     <Select
-      onValueChange={(newValue) => {
-        window.location.href = newValue === "en" ? "/" : "/fr";
-      }}
+      onValueChange={onValueChange}
     >
       <SelectTrigger className="gap-4 border-0 text-3xl">
         <SelectValue

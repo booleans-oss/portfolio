@@ -14,6 +14,8 @@ import PolyworkIcon from "../icones/Polywork.astro";
 import { t, changeLanguage } from "i18next";
 import { Trans } from "astro-i18next/components";
 import LanguageSelector from "../components/languageSelector";
+import { localizePath } from "astro-i18next";
+import ExternalArrow from "../icones/ExternalArrow";
 
 changeLanguage("en");
 ---
@@ -23,7 +25,9 @@ changeLanguage("en");
     <MouseSpotlight />
     <LightCircle class="top-0 left-0" />
     <LightCircle class="bottom-0 right-0" />
-    <BackgroundLight />
+    <BackgroundLight
+        class="fixed -top-10 left-40 w-screen hidden xl:block -z-10"
+    />
     <main class="w-screen h-screen">
         <div
             class="z-10 grid grid-cols-[1fr,min(640px,100%),1fr] px-10 font-sans text-base text-blue-100/90 xl:grid-cols-[1fr,min(440px,100%),min(560px,100%),1fr] xl:gap-x-40 xl:px-0 space-y-10 xl:space-y-0"
@@ -101,6 +105,42 @@ changeLanguage("en");
                             >
                                 {t("index.tree.projects")}
                             </h2>
+                        </div>
+                    </div>
+                    <div class="space-y-4 mt-12">
+                        <div class="text-blue-100/70 text-lg">
+                            {t("index.presentation.cvStart")}{" "}<a
+                                href={localizePath("/cv")}
+                                class="text-blue-100 border-b border-blue-100 group"
+                            >
+                                {t("index.presentation.cvEnd")}
+                                <ExternalArrow
+                                    client:visible
+                                    className="inline h-4 w-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition duration-300 ease-in-out"
+                                /></a
+                            >
+                        </div>
+                        <div class="text-blue-100/70 text-lg">
+                            {t("index.presentation.booking")}
+                            : <a
+                                href="https://calendly.com/clementlebon/30-min"
+                                target="_blank"
+                                referrerpolicy="no-referrer"
+                                class="text-blue-100 border-b border-blue-100 group"
+                                >30-min <ExternalArrow
+                                    client:visible
+                                    className="inline h-4 w-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition duration-300 ease-in-out"
+                                /></a
+                            >,{" "}<a
+                                href="https://calendly.com/clementlebon/60-min"
+                                target="_blank"
+                                referrerpolicy="no-referrer"
+                                class="text-blue-100 border-b border-blue-100 group"
+                                >60-min <ExternalArrow
+                                    client:visible
+                                    className="inline h-4 w-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition duration-300 ease-in-out"
+                                /></a
+                            >
                         </div>
                     </div>
                 </div>

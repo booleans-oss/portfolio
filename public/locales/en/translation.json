@@ -11,7 +11,10 @@
   "index": {
     "presentation": {
       "role": "Software Engineer",
-      "description": "I build <0>accessible</0>, <1>inclusive</1> websites and applications, from scratch and with a focus on <2>performance</2>. I want to create <3>experiences</3> for the web."
+      "description": "I build <0>accessible</0>, <1>inclusive</1> websites and applications, from scratch and with a focus on <2>performance</2>. I want to create <3>experiences</3> for the web.",
+      "cvStart": "Feel free to look at",
+      "cvEnd": "my printable CV",
+      "booking": "If you want to chat with me, you can book a session"
     },
     "tree": {
       "about": "About",
@@ -166,6 +169,125 @@
             "Bureaucracy",
             "Parliamentary Procedures",
             "Research"
+          ]
+        }
+      ]
+    }
+  },
+  "cv": {
+    "goBackButton": "Go back",
+    "downloadButton": "Download / Print",
+    "skills": {
+      "title": "Skills",
+      "databases": "Databases"
+    },
+    "education": {
+      "title": "Education",
+      "degree": "Bachelor in Business Administration",
+      "highSchoolDegree": "International Baccalaureate"
+    },
+    "experience": {
+      "title": "Experience",
+      "experiences": [
+        {
+          "url": "https://www.getresponsible.com/",
+          "company": "Responsible",
+          "title": "Software Engineer",
+          "date": "2022 - Present",
+          "tasks": [
+            "Deliver high-quality, robust production code for a diverse array of projects for clients like RAINS.",
+            "Work alongside creative directors to lead the research, development, and architecture of technical solutions to fulfill business requirements",
+            "Collaborate with designers, project managers, and other engineers to transform creative concepts into production realities for clients and stakeholders",
+            "Lead and facilitate company wide accessibility initiatives such as technical documentation of best practices and screen reader training"
+          ],
+          "tags": [
+            "Typescript",
+            "Javascript",
+            "React",
+            "Next.js",
+            "Chakra UI",
+            "Nest.js",
+            "PostgreSQL",
+            "Azure",
+            "Shopify",
+            "OpenAPI",
+            "Elastic",
+            "Figma"
+          ]
+        },
+        {
+          "url": "https://www.standforua.org/",
+          "company": "StandForUA",
+          "title": "Software Engineer",
+          "date": "2022 - Present",
+          "tasks": [
+            "Developed and styled main marketing web applications for Ukraine support using Next.js and Chakra UI",
+            "Built and shipped multiple features and extensions leveraging third-party and internal API integrations",
+            "Architected and implemented the user interface from login to contributing to requests and creating requests",
+            "Contributed extensively to the implementation of several Google API plugins (Maps, Geolocalisation, etc..)"
+          ],
+          "tags": [
+            "Typescript",
+            "Javascript",
+            "React",
+            "Next.js",
+            "Chakra UI",
+            "Loopback",
+            "PostgreSQL",
+            "AWS",
+            "Google API",
+            "OpenAPI",
+            "Figma",
+            "Google Analytics"
+          ]
+        },
+        {
+          "url": "https://github.com/development-community",
+          "company": "Development Community",
+          "title": "Chief Technical Officer",
+          "date": "2020 - Present",
+          "tasks": [
+            "Collaborated with other student engineers on projects to create new websites for customers and organizations in the community",
+            "Proposed and implemented scalable solutions to simplify communication with our customers including building a fully interactive commerce and chat platform",
+            "Managed the entire technical department of the organization from designers to engineers and to quality assurance members",
+            "Architected several tools and frameworks to assure the quality of our products in order to increase the team's overall quality of delivery"
+          ],
+          "tags": [
+            "Typescript",
+            "Javascript",
+            "React",
+            "Vue",
+            "TailwindCSS",
+            "MySQL",
+            "Adobe XD",
+            "Nx Workspace",
+            "AWS",
+            "Nest.js"
+          ]
+        },
+        {
+          "url": "https://aysdiscord.com/",
+          "company": "Advertise Your Server",
+          "title": "Software Engineer",
+          "date": "2020 - 2022",
+          "tasks": [
+            "Developed, maintained, and shipped production code for client websites primarily using React, Next.js, TailwindCSS",
+            "Performed quality assurance tests on various sites to ensure cross-browser compatibility and mobile responsiveness",
+            "Built and delivered technical solutions according to customers' requirements",
+            "Assured the full delivery of all frontend projects by the technical teams from understanding customers' needs to quality assurance of colleagues' codes"
+          ],
+          "tags": [
+            "Typescript",
+            "Javascript",
+            "React",
+            "Next.js",
+            "TailwindCSS",
+            "MongoDB",
+            "Turborepo",
+            "Express.js",
+            "Svelte",
+            "Docker",
+            "Terraform"
           ]
         }
       ]
