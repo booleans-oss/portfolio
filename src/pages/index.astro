@@ -19,18 +19,21 @@ changeLanguage("en");
 ---
 
 <Layout>
+    <Noise />
     <MouseSpotlight />
+    <LightCircle class="top-0 left-0" />
+    <LightCircle class="bottom-0 right-0" />
+    <BackgroundLight />
     <main class="w-screen h-screen">
-        <Noise />
         <div
             class="z-10 grid grid-cols-[1fr,min(640px,100%),1fr] px-10 font-sans text-base text-blue-100/90 xl:grid-cols-[1fr,min(440px,100%),min(560px,100%),1fr] xl:gap-x-40 xl:px-0 space-y-10 xl:space-y-0"
         >
             <div
                 class="flex flex-col justify-between h-full xl:h-screen py-24 pb-0 xl:pb-24 4 col-start-2 gap-10 relative xl:sticky top-auto xl:top-0"
             >
-            <div class="absolute top-4">
-                <LanguageSelector client:visible/>
-            </div>
+                <div class="absolute top-4">
+                    <LanguageSelector client:only />
+                </div>
                 <div>
                     <div class="flex gap-4 xl:gap-6 items-center">
                         <ProfilePicture url="/assets/pp.jpg" />
@@ -128,12 +131,8 @@ changeLanguage("en");
                 class="w-full col-start-2 xl:col-start-3 space-y-20 py-24 pt-0 xl:pt-24"
             >
                 <AboutSection />
-                <ExperiencesComponent client:load />
+                <ExperiencesComponent client:only />
             </div>
-
-            <LightCircle class="top-0 left-0" />
-            <LightCircle class="bottom-0 right-0" />
-            <BackgroundLight />
         </div>
     </main>
 </Layout>

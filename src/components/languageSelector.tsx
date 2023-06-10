@@ -6,14 +6,18 @@ import {
   SelectTrigger,
   SelectValue,
 } from "./ui/select";
-
-const emojis = {
-  fr: "🇫🇷",
-  en: "🇬🇧",
-};
+import { useMemo } from "react";
 
 export default function LanguageSelector() {
   const { i18n } = useTranslation();
+
+  const emojis = useMemo(
+    () => ({
+      fr: "🇫🇷",
+      en: "🇬🇧",
+    }),
+    []
+  );
 
   return (
     <Select
@@ -23,7 +27,7 @@ export default function LanguageSelector() {
     >
       <SelectTrigger className="gap-4 border-0 text-3xl">
         <SelectValue
-          placeholder={emojis[i18n.language as keyof typeof emojis]}
+          placeholder={emojis[i18n.language as keyof typeof emojis] ?? "🌐"}
         />
       </SelectTrigger>
       <SelectContent>
