@@ -500,13 +500,13 @@
     "@floating-ui/dom" "^1.2.7"
 
 "@fontsource/aileron@^5.0.2":
-  version "5.0.2"
-  resolved "https://registry.npmjs.org/@fontsource/aileron/-/aileron-5.0.2.tgz"
-  integrity sha512-Jsx2ANypDOZ2IbXKRkY8HdFnEk5WyV2mjTou/ut23U7IJaLGIlctVnmw5XSKRMZ0KSHYcriTnwpmiSvmJ4lXFQ==
+  version "5.0.3"
+  resolved "https://registry.yarnpkg.com/@fontsource/aileron/-/aileron-5.0.3.tgz#f17dc9d0310e50df620bff3c72c61224a0c6b4f6"
+  integrity sha512-j9+WGHS+6fMTkr+DduxcVBaObjYRKsmqZxtE0utT4QzwPjoXIQvAA7UhNpixGZxMlsSVfMzgf/Bq0lG1JYkymA==
 
 "@jridgewell/gen-mapping@^0.3.0", "@jridgewell/gen-mapping@^0.3.2":
   version "0.3.3"
-  resolved "https://registry.npmjs.org/@jridgewell/gen-mapping/-/gen-mapping-0.3.3.tgz"
+  resolved "https://registry.yarnpkg.com/@jridgewell/gen-mapping/-/gen-mapping-0.3.3.tgz#7e02e6eb5df901aaedb08514203b096614024098"
   integrity sha512-HLhSWOLRi875zjjMG/r+Nv0oCW8umGb0BgEhyX3dDX3egwZtB8PqLnjz3yedt8R5StBrzcg4aBpnh8UA9D1BoQ==
   dependencies:
     "@jridgewell/set-array" "^1.0.1"
