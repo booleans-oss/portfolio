@@ -9,9 +9,10 @@ import {
 import PrintIcon from "../icones/Print";
 import RightArrow from "../icones/RightArrow";
 import { useTranslation } from "react-i18next";
-import { useMemo, useRef } from "react";
-import { useReactToPrint } from 'react-to-print';
+import { useEffect, useMemo, useRef, useState } from "react";
+import { useReactToPrint } from "react-to-print";
 import LanguageSelector from "./languageSelector";
+import { cn } from "../lib/utils";
 
 type Experience = {
   url: string;
@@ -22,9 +23,60 @@ type Experience = {
   tags: string[];
 };
 
+const FE_TAGS = [
+  "React",
+  "Next.js",
+  "Vue",
+  "HTML",
+  "CSS",
+  "SASS/SCSS",
+  "TailwindCSS",
+  "Bootstrap",
+  "Chakra UI",
+  "Storybook",
+  "Svelte",
+];
+
+const BE_TAGS = [
+  "Typescript",
+  "Javascript",
+  "Node.js",
+  "Express.js",
+  "Nest.js",
+  "TRPC",
+  "GraphQL",
+  "Serverless",
+  "Loopback",
+];
+
+const DESIGN_TAGS = ["Figma", "Adobe XD", "Adobe Photoshop"];
+
+const DATABASE_TAGS = ["MySQL", "PostgreSQL", "MongoDB", "SQLite", "Redis"];
+
+const DEVOPS_TAGS = [
+  "SHELL",
+  "Terraform",
+  "Nx Workspace",
+  "Docker",
+  "Heroku",
+  "AWS",
+  "Azure",
+  "Turborepo",
+];
+
+const allTags = [
+  ...FE_TAGS,
+  ...BE_TAGS,
+  ...DESIGN_TAGS,
+  ...DATABASE_TAGS,
+  ...DEVOPS_TAGS,
+];
+
 export default function PrintableView() {
   const { t, i18n } = useTranslation();
   const printableDocument = useRef<HTMLDivElement>(null);
+
+  const [activeTag, setActiveTag] = useState<string | null>(null);
 
   const handlePrint = useReactToPrint({
     content: () => printableDocument.current,
@@ -37,6 +89,28 @@ export default function PrintableView() {
       }) as Array<Experience>,
     [t]
   );
+
+  useEffect(() => {
+    const handleMouseMove = (e: MouseEvent) => {
+      const target = e.target as HTMLElement;
+      const text = target.innerText;
+      if (
+        !target ||
+        !text ||
+        !allTags.map((tag) => tag.toLowerCase()).includes(text.toLowerCase())
+      ) {
+        setActiveTag(null);
+      } else {
+        setActiveTag(text.toLowerCase());
+      }
+    };
+
+    document.addEventListener("mousemove", handleMouseMove);
+
+    return () => {
+      document.removeEventListener("mousemove", handleMouseMove);
+    };
+  }, []);
 
   return (
     <div className="w-screen h-full flex items-center xl:py-40 flex-col gap-10">
@@ -53,12 +127,18 @@ export default function PrintableView() {
           <RightArrow className="w-5 h-5 inline-block mr-2 rotate-180 group-hover:-translate-x-2 transition duration-3 ease-in-out" />
           {t("cv.goBackButton")}
         </a>
-        <button onClick={handlePrint} className="text-blue-100/50 flex gap-2 items-center rounded-full border border-blue-100/50 px-4 py-2 text-sm uppercase font-semibold hover:text-blue-100/90 transition duration-300 ease-in-out">
+        <button
+          onClick={handlePrint}
+          className="text-blue-100/50 flex gap-2 items-center rounded-full border border-blue-100/50 px-4 py-2 text-sm uppercase font-semibold hover:text-blue-100/90 transition duration-300 ease-in-out"
+        >
           <PrintIcon className="inline h-4 w-4" />
           {t("cv.downloadButton")}
         </button>
       </div>
-      <div className="w-full xl:w-[1000px] h-full bg-background p-8 space-y-12" ref={printableDocument}>
+      <div
+        className="w-full xl:w-[1000px] h-full bg-background p-8 space-y-12"
+        ref={printableDocument}
+      >
         <div className="flex flex-col xl:flex-row items-start justify-between xl:items-center border-b border-black pb-10">
           <div>
             <h1 className="text-4xl font-black tracking-tighter">
@@ -132,36 +212,18 @@ export default function PrintableView() {
                     Frontend
                   </h4>
                   <ul className="list-none flex flex-wrap gap-2 text-sm">
-                    <li className="bg-zinc-100/70 px-2 rounded font-bold hover:bg-zinc-200 cursor-pointer">
-                      React
-                    </li>
-                    <li className="bg-zinc-100/70 px-2 rounded font-bold hover:bg-zinc-200 cursor-pointer">
-                      Next.js
-                    </li>
-                    <li className="bg-zinc-100/70 px-2 rounded font-bold hover:bg-zinc-200 cursor-pointer">
-                      Vue.js
-                    </li>
-                    <li className="bg-zinc-100/70 px-2 rounded font-bold hover:bg-zinc-200 cursor-pointer">
-                      HTML
-                    </li>
-                    <li className="bg-zinc-100/70 px-2 rounded font-bold hover:bg-zinc-200 cursor-pointer">
-                      CSS
-                    </li>
-                    <li className="bg-zinc-100/70 px-2 rounded font-bold hover:bg-zinc-200 cursor-pointer">
-                      SCSS
-                    </li>
-                    <li className="bg-zinc-100/70 px-2 rounded font-bold hover:bg-zinc-200 cursor-pointer">
-                      TailwindCSS
-                    </li>
-                    <li className="bg-zinc-100/70 px-2 rounded font-bold hover:bg-zinc-200 cursor-pointer">
-                      Bootstrap
-                    </li>
-                    <li className="bg-zinc-100/70 px-2 rounded font-bold hover:bg-zinc-200 cursor-pointer">
-                      Chakra UI
-                    </li>
-                    <li className="bg-zinc-100/70 px-2 rounded font-bold hover:bg-zinc-200 cursor-pointer">
-                      Storybook
-                    </li>
+                    {FE_TAGS.map((tag) => (
+                      <li
+                        key={tag}
+                        className={cn(
+                          "bg-zinc-100/70 px-2 rounded font-bold cursor-pointer transition duration-300 ease-in-out",
+                          activeTag === tag.toLowerCase() &&
+                            "bg-black text-white"
+                        )}
+                      >
+                        {tag}
+                      </li>
+                    ))}
                   </ul>
                 </div>
                 <div className="flex flex-col gap-2">
@@ -169,30 +231,18 @@ export default function PrintableView() {
                     Backend
                   </h4>
                   <ul className="list-none flex flex-wrap gap-2 text-sm">
-                    <li className="bg-zinc-100/70 px-2 rounded font-bold hover:bg-zinc-200 cursor-pointer">
-                      React
-                    </li>
-                    <li className="bg-zinc-100/70 px-2 rounded font-bold hover:bg-zinc-200 cursor-pointer">
-                      Node.js
-                    </li>
-                    <li className="bg-zinc-100/70 px-2 rounded font-bold hover:bg-zinc-200 cursor-pointer">
-                      Express.js
-                    </li>
-                    <li className="bg-zinc-100/70 px-2 rounded font-bold hover:bg-zinc-200 cursor-pointer">
-                      Nest.js
-                    </li>
-                    <li className="bg-zinc-100/70 px-2 rounded font-bold hover:bg-zinc-200 cursor-pointer">
-                      CSS
-                    </li>
-                    <li className="bg-zinc-100/70 px-2 rounded font-bold hover:bg-zinc-200 cursor-pointer">
-                      GraphQL
-                    </li>
-                    <li className="bg-zinc-100/70 px-2 rounded font-bold hover:bg-zinc-200 cursor-pointer">
-                      Serverless
-                    </li>
-                    <li className="bg-zinc-100/70 px-2 rounded font-bold hover:bg-zinc-200 cursor-pointer">
-                      Loopback
-                    </li>
+                    {BE_TAGS.map((tag) => (
+                      <li
+                        key={tag}
+                        className={cn(
+                          "bg-zinc-100/70 px-2 rounded font-bold cursor-pointer transition duration-300 ease-in-out",
+                          activeTag === tag.toLowerCase() &&
+                            "bg-black text-white"
+                        )}
+                      >
+                        {tag}
+                      </li>
+                    ))}
                   </ul>
                 </div>
                 <div className="flex flex-col gap-2">
@@ -200,15 +250,18 @@ export default function PrintableView() {
                     Design
                   </h4>
                   <ul className="list-none flex flex-wrap gap-2 text-sm">
-                    <li className="bg-zinc-100/70 px-2 rounded font-bold hover:bg-zinc-200 cursor-pointer">
-                      Figma
-                    </li>
-                    <li className="bg-zinc-100/70 px-2 rounded font-bold hover:bg-zinc-200 cursor-pointer">
-                      Adobe XD
-                    </li>
-                    <li className="bg-zinc-100/70 px-2 rounded font-bold hover:bg-zinc-200 cursor-pointer">
-                      Adobe Photoshop
-                    </li>
+                    {DESIGN_TAGS.map((tag) => (
+                      <li
+                        key={tag}
+                        className={cn(
+                          "bg-zinc-100/70 px-2 rounded font-bold cursor-pointer transition duration-300 ease-in-out",
+                          activeTag === tag.toLowerCase() &&
+                            "bg-black text-white"
+                        )}
+                      >
+                        {tag}
+                      </li>
+                    ))}
                   </ul>
                 </div>
                 <div className="flex flex-col gap-2">
@@ -216,18 +269,18 @@ export default function PrintableView() {
                     {t("cv.skills.databases")}
                   </h4>
                   <ul className="list-none flex flex-wrap gap-2 text-sm">
-                    <li className="bg-zinc-100/70 px-2 rounded font-bold hover:bg-zinc-200 cursor-pointer">
-                      MySQL
-                    </li>
-                    <li className="bg-zinc-100/70 px-2 rounded font-bold hover:bg-zinc-200 cursor-pointer">
-                      PostgreSQL
-                    </li>
-                    <li className="bg-zinc-100/70 px-2 rounded font-bold hover:bg-zinc-200 cursor-pointer">
-                      SQLite
-                    </li>
-                    <li className="bg-zinc-100/70 px-2 rounded font-bold hover:bg-zinc-200 cursor-pointer">
-                      Redis
-                    </li>
+                    {DATABASE_TAGS.map((tag) => (
+                      <li
+                        key={tag}
+                        className={cn(
+                          "bg-zinc-100/70 px-2 rounded font-bold cursor-pointer transition duration-300 ease-in-out",
+                          activeTag === tag.toLowerCase() &&
+                            "bg-black text-white"
+                        )}
+                      >
+                        {tag}
+                      </li>
+                    ))}
                   </ul>
                 </div>
                 <div className="flex flex-col gap-2">
@@ -235,30 +288,18 @@ export default function PrintableView() {
                     DevOps
                   </h4>
                   <ul className="list-none flex flex-wrap gap-2 text-sm">
-                    <li className="bg-zinc-100/70 px-2 rounded font-bold hover:bg-zinc-200 cursor-pointer">
-                      Shell
-                    </li>
-                    <li className="bg-zinc-100/70 px-2 rounded font-bold hover:bg-zinc-200 cursor-pointer">
-                      Terraform
-                    </li>
-                    <li className="bg-zinc-100/70 px-2 rounded font-bold hover:bg-zinc-200 cursor-pointer">
-                      Nx
-                    </li>
-                    <li className="bg-zinc-100/70 px-2 rounded font-bold hover:bg-zinc-200 cursor-pointer">
-                      Docker
-                    </li>
-                    <li className="bg-zinc-100/70 px-2 rounded font-bold hover:bg-zinc-200 cursor-pointer">
-                      Heroku
-                    </li>
-                    <li className="bg-zinc-100/70 px-2 rounded font-bold hover:bg-zinc-200 cursor-pointer">
-                      AWS
-                    </li>
-                    <li className="bg-zinc-100/70 px-2 rounded font-bold hover:bg-zinc-200 cursor-pointer">
-                      Azure
-                    </li>
-                    <li className="bg-zinc-100/70 px-2 rounded font-bold hover:bg-zinc-200 cursor-pointer">
-                      Turborepo
-                    </li>
+                    {DEVOPS_TAGS.map((tag) => (
+                      <li
+                        key={tag}
+                        className={cn(
+                          "bg-zinc-100/70 px-2 rounded font-bold cursor-pointer transition duration-300 ease-in-out",
+                          activeTag === tag.toLowerCase() &&
+                            "bg-black text-white"
+                        )}
+                      >
+                        {tag}
+                      </li>
+                    ))}
                   </ul>
                 </div>
               </div>
@@ -294,7 +335,10 @@ export default function PrintableView() {
               </h3>
               <div className="flex flex-col gap-8">
                 {experiences.map((experience, i) => (
-                  <div key={experience.company} className={i === 0 ? "mt-4" : undefined}>
+                  <div
+                    key={experience.company}
+                    className={i === 0 ? "mt-4" : undefined}
+                  >
                     <a
                       href={experience.url}
                       target="_blank"
@@ -315,7 +359,11 @@ export default function PrintableView() {
                           {experience.tags.map((tag) => (
                             <li
                               key={tag}
-                              className="bg-zinc-100/70 px-2 rounded font-bold hover:bg-zinc-200 cursor-pointer"
+                              className={cn(
+                                "bg-zinc-100/70 px-2 rounded font-bold cursor-pointer transition duration-300 ease-in-out hover:bg-black hover:text-white",
+                                activeTag === tag.toLowerCase() &&
+                                  "bg-black text-white"
+                              )}
                             >
                               {tag}
                             </li>
