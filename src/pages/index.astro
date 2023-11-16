@@ -1,178 +1,155 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import MouseSpotlight from "../components/mouseSpotlight.astro";
+import { localizePath } from "astro-i18next";
+import { Trans } from "astro-i18next/components";
+import { changeLanguage, t } from "i18next";
+import AboutSection from "../components/about.astro";
 import ExperiencesComponent from "../components/experiences";
-import Noise from "../components/ui/noise.astro";
+import LanguageSelector from "../components/languageSelector";
+import MouseSpotlight from "../components/mouseSpotlight.astro";
 import BackgroundLight from "../components/ui/backgroundLight.astro";
 import LightCircle from "../components/ui/lightCircle.astro";
-import AboutSection from "../components/about.astro";
+import Noise from "../components/ui/noise.astro";
 import ProfilePicture from "../components/ui/profilePicture.astro";
 import SocialLink from "../components/ui/socialLink.astro";
-import LinkedInIcon from "../icones/LinkedIn.astro";
-import GithubIcon from "../icones/Github.astro";
-import PolyworkIcon from "../icones/Polywork.astro";
-import { t, changeLanguage } from "i18next";
-import { Trans } from "astro-i18next/components";
-import LanguageSelector from "../components/languageSelector";
-import { localizePath } from "astro-i18next";
 import ExternalArrow from "../icones/ExternalArrow";
+import GithubIcon from "../icones/Github.astro";
+import LinkedInIcon from "../icones/LinkedIn.astro";
+import PolyworkIcon from "../icones/Polywork.astro";
+import Layout from "../layouts/Layout.astro";
 
 changeLanguage("en");
 ---
 
 <Layout>
-    <Noise />
-    <MouseSpotlight />
-    <LightCircle class="top-0 left-0" />
-    <LightCircle class="bottom-0 right-0" />
-    <BackgroundLight
-        class="fixed -top-10 left-40 w-screen hidden xl:block -z-10"
-    />
-    <main class="w-screen h-screen">
-        <div
-            class="z-10 grid grid-cols-[1fr,min(640px,100%),1fr] px-10 font-sans text-base text-blue-100/90 xl:grid-cols-[1fr,min(440px,100%),min(560px,100%),1fr] xl:gap-x-40 xl:px-0 space-y-10 xl:space-y-0"
-        >
-            <div
-                class="flex flex-col justify-between h-full xl:h-screen py-24 pb-0 xl:pb-24 4 col-start-2 gap-10 relative xl:sticky top-auto xl:top-0"
-            >
-                <div class="absolute top-4">
-                    <LanguageSelector client:only />
-                </div>
-                <div>
-                    <div class="flex gap-4 xl:gap-6 items-center">
-                        <ProfilePicture url="/assets/pp.jpg" />
-                        <div>
-                            <h1 class="text-4xl font-medium text-blue-100/80">
-                                Clement
-                            </h1>
-                            <h2 class="text-lg text-blue-100/50 leading-7">
-                                {t("index.presentation.role")} @{" "}
-                                <span class="text-blue-100/80 italic"
-                                    >RESPONSIBLE</span
-                                >
-                            </h2>
-                        </div>
-                    </div>
-                    <p class="text-lg text-blue-100/70 mt-12">
-                        <Trans i18nKey="index.presentation.description">
-                            I build <span class="text-blue-100/90"
-                                >accessible</span
-                            >,{" "}
-                            <span class="text-blue-100/90">inclusive</span> web applications,
-                            from scratch and with a focus on
-                            <span class="text-blue-100/90">performance</span>. I
-                            want to create <span class="text-blue-100/90"
-                                >experiences</span
-                            > for the web.
-                        </Trans>
-                    </p>
-                    <div class="mt-12">
-                        <div
-                            class="group flex items-center gap-4 cursor-pointer"
-                        >
-                            <div
-                                class="h-px w-8 bg-blue-100/70 transition-all duration-100 ease-in-out group-hover:w-16"
-                            >
-                            </div>
-                            <h2
-                                class="uppercase text-md text-blue-100/70 group-hover:text-blue-100/90 group-hover:font-semibold"
-                            >
-                                {t("index.tree.about")}
-                            </h2>
-                        </div>
-                        <div
-                            class="group flex items-center gap-4 cursor-pointer mt-2"
-                        >
-                            <div
-                                class="h-px w-8 bg-blue-100/70 transition-all duration-100 ease-in-out group-hover:w-16"
-                            >
-                            </div>
-                            <h2
-                                class="uppercase text-md text-blue-100/70 group-hover:text-blue-100/90 group-hover:font-semibold"
-                            >
-                                {t("index.tree.experience")}
-                            </h2>
-                        </div>
-                        <div
-                            class="flex group items-center gap-4 cursor-pointer mt-2"
-                        >
-                            <div
-                                class="h-px w-8 bg-blue-100/70 transition-all duration-100 ease-in-out group-hover:w-16"
-                            >
-                            </div>
-                            <h2
-                                class="uppercase text-md text-blue-100/70 group-hover:text-blue-100/90 group-hover:font-semibold"
-                            >
-                                {t("index.tree.projects")}
-                            </h2>
-                        </div>
-                    </div>
-                    <div class="space-y-4 mt-12">
-                        <div class="text-blue-100/70 text-lg">
-                            {t("index.presentation.cvStart")}{" "}<a
-                                href={localizePath("/cv")}
-                                class="text-blue-100 border-b border-blue-100 group"
-                            >
-                                {t("index.presentation.cvEnd")}
-                                <ExternalArrow
-                                    client:visible
-                                    className="inline h-4 w-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition duration-300 ease-in-out"
-                                /></a
-                            >
-                        </div>
-                        <div class="text-blue-100/70 text-lg">
-                            {t("index.presentation.booking")}
-                            : <a
-                                href="https://calendly.com/clementlebon/30-min"
-                                target="_blank"
-                                referrerpolicy="no-referrer"
-                                class="text-blue-100 border-b border-blue-100 group"
-                                >30-min <ExternalArrow
-                                    client:visible
-                                    className="inline h-4 w-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition duration-300 ease-in-out"
-                                /></a
-                            >,{" "}<a
-                                href="https://calendly.com/clementlebon/60-min"
-                                target="_blank"
-                                referrerpolicy="no-referrer"
-                                class="text-blue-100 border-b border-blue-100 group"
-                                >60-min <ExternalArrow
-                                    client:visible
-                                    className="inline h-4 w-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition duration-300 ease-in-out"
-                                /></a
-                            >
-                        </div>
-                    </div>
-                </div>
-                <div
-                    class="flex gap-4 text-md text-blue-100/90 font-semibold flex-wrap"
-                >
-                    <SocialLink
-                        url="https://linkedin.com/clement-lebon"
-                        name="LinkedIn"
-                    >
-                        <LinkedInIcon class="h-6 w-6" />
-                    </SocialLink>
-                    <SocialLink
-                        url="https://github.com/booleans-oss"
-                        name="Github"
-                    >
-                        <GithubIcon class="h-6 w-6" />
-                    </SocialLink>
-                    <SocialLink
-                        url="https://poly.me/clementlbn"
-                        name="Polywork"
-                    >
-                        <PolyworkIcon class="h-6 w-6" />
-                    </SocialLink>
-                </div>
-            </div>
-            <div
-                class="w-full col-start-2 xl:col-start-3 space-y-20 py-24 pt-0 xl:pt-24"
-            >
-                <AboutSection />
-                <ExperiencesComponent client:only />
-            </div>
+  <Noise />
+  <MouseSpotlight />
+  <LightCircle class="top-0 left-0" />
+  <LightCircle class="bottom-0 right-0" />
+  <BackgroundLight
+    class="fixed -top-10 left-40 w-screen hidden xl:block -z-10"
+  />
+  <main class="w-screen h-screen">
+    <div
+      class="z-10 grid grid-cols-[1fr,min(640px,100%),1fr] px-10 font-sans text-base text-blue-100/90 xl:grid-cols-[1fr,min(440px,100%),min(560px,100%),1fr] xl:gap-x-40 xl:px-0 space-y-10 xl:space-y-0"
+    >
+      <div
+        class="flex flex-col justify-between h-full xl:h-screen py-24 pb-0 xl:pb-24 4 col-start-2 gap-10 relative xl:sticky top-auto xl:top-0"
+      >
+        <div class="absolute top-4">
+          <LanguageSelector client:only />
         </div>
-    </main>
+        <div>
+          <div class="flex gap-4 xl:gap-6 items-center">
+            <ProfilePicture url="/assets/pp.jpg" />
+            <div>
+              <h1 class="text-4xl font-medium text-blue-100/80">Clement</h1>
+              <h2 class="text-lg text-blue-100/50 leading-7">
+                {t("index.presentation.role")} @{" "}
+                <span class="text-blue-100/80 italic">BRAIN</span>
+              </h2>
+            </div>
+          </div>
+          <p class="text-lg text-blue-100/70 mt-12">
+            <Trans i18nKey="index.presentation.description">
+              I build <span class="text-blue-100/90">accessible</span>,{" "}
+              <span class="text-blue-100/90">inclusive</span> web applications, from
+              scratch and with a focus on
+              <span class="text-blue-100/90">performance</span>. I want to
+              create <span class="text-blue-100/90">experiences</span> for the web.
+            </Trans>
+          </p>
+          <div class="mt-12">
+            <div class="group flex items-center gap-4 cursor-pointer">
+              <div
+                class="h-px w-8 bg-blue-100/70 transition-all duration-100 ease-in-out group-hover:w-16"
+              >
+              </div>
+              <h2
+                class="uppercase text-md text-blue-100/70 group-hover:text-blue-100/90 group-hover:font-semibold"
+              >
+                {t("index.tree.about")}
+              </h2>
+            </div>
+            <div class="group flex items-center gap-4 cursor-pointer mt-2">
+              <div
+                class="h-px w-8 bg-blue-100/70 transition-all duration-100 ease-in-out group-hover:w-16"
+              >
+              </div>
+              <h2
+                class="uppercase text-md text-blue-100/70 group-hover:text-blue-100/90 group-hover:font-semibold"
+              >
+                {t("index.tree.experience")}
+              </h2>
+            </div>
+            <div class="flex group items-center gap-4 cursor-pointer mt-2">
+              <div
+                class="h-px w-8 bg-blue-100/70 transition-all duration-100 ease-in-out group-hover:w-16"
+              >
+              </div>
+              <h2
+                class="uppercase text-md text-blue-100/70 group-hover:text-blue-100/90 group-hover:font-semibold"
+              >
+                {t("index.tree.projects")}
+              </h2>
+            </div>
+          </div>
+          <div class="space-y-4 mt-12">
+            <div class="text-blue-100/70 text-lg">
+              {t("index.presentation.cvStart")}{" "}<a
+                href={localizePath("/cv")}
+                class="text-blue-100 border-b border-blue-100 group"
+              >
+                {t("index.presentation.cvEnd")}
+                <ExternalArrow
+                  client:visible
+                  className="inline h-4 w-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition duration-300 ease-in-out"
+                /></a
+              >
+            </div>
+            <div class="text-blue-100/70 text-lg">
+              {t("index.presentation.booking")}
+              : <a
+                href="https://calendly.com/clementlebon/30-min"
+                target="_blank"
+                referrerpolicy="no-referrer"
+                class="text-blue-100 border-b border-blue-100 group"
+                >30-min <ExternalArrow
+                  client:visible
+                  className="inline h-4 w-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition duration-300 ease-in-out"
+                /></a
+              >,{" "}<a
+                href="https://calendly.com/clementlebon/60-min"
+                target="_blank"
+                referrerpolicy="no-referrer"
+                class="text-blue-100 border-b border-blue-100 group"
+                >60-min <ExternalArrow
+                  client:visible
+                  className="inline h-4 w-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition duration-300 ease-in-out"
+                /></a
+              >
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex gap-4 text-md text-blue-100/90 font-semibold flex-wrap"
+        >
+          <SocialLink url="https://linkedin.com/clement-lebon" name="LinkedIn">
+            <LinkedInIcon class="h-6 w-6" />
+          </SocialLink>
+          <SocialLink url="https://github.com/booleans-oss" name="Github">
+            <GithubIcon class="h-6 w-6" />
+          </SocialLink>
+          <SocialLink url="https://poly.me/clementlbn" name="Polywork">
+            <PolyworkIcon class="h-6 w-6" />
+          </SocialLink>
+        </div>
+      </div>
+      <div
+        class="w-full col-start-2 xl:col-start-3 space-y-20 py-24 pt-0 xl:pt-24"
+      >
+        <AboutSection />
+        <ExperiencesComponent client:only />
+      </div>
+    </div>
+  </main>
 </Layout>

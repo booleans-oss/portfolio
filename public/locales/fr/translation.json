@@ -170,6 +170,24 @@
             "Procédures parlementaires",
             "Recherche"
           ]
+        },
+        {
+          "title": "Développeur Fullstack",
+          "tasks": [
+            "Construit le site principal de quizz gamifié",
+            "Refactor le code principal et le panneau d'administration",
+            "Gère l'équipe technique pour des décisions cruciales",
+            "",
+            "Peer reviewed different critical pull requests and issues"
+          ],
+          "tags": [
+            "Typescript",
+            "React",
+            "Next.js",
+            "TailwindCSS",
+            "Nest.js",
+            "Google Cloud"
+          ]
         }
       ]
     }

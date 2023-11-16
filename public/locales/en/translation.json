@@ -170,6 +170,23 @@
             "Parliamentary Procedures",
             "Research"
           ]
+        },
+        {
+          "title": "Software Engineer",
+          "tasks": [
+            "Built their main quizz game application",
+            "Refactored the codebase and admin panel",
+            "Lead the technical team through different crucial decisions",
+            "Peer reviewed different critical pull requests and issues"
+          ],
+          "tags": [
+            "Typescript",
+            "React",
+            "Next.js",
+            "TailwindCSS",
+            "Nest.js",
+            "Google Cloud"
+          ]
         }
       ]
     }
@@ -189,6 +206,30 @@
     "experience": {
       "title": "Experience",
       "experiences": [
+        {
+          "url": "https://brainsecurity.io/",
+          "company": "BRAIN Cyber Awareness",
+          "title": "Software Engineer",
+          "date": "2023 - Present",
+          "tasks": [
+            "Create smooth, performant, and responsive user interfaces of a game and quizz application",
+            "Work alongside the design team to provide an accurate and pixel-perfect implementation of the designs",
+            "Collaborate with customers and clients to understand their needs and provide them with the best solutions",
+            "Lead the technical team in order to optimize productivity and quality of delivery"
+          ],
+          "tags": [
+            "Typescript",
+            "Javascript",
+            "React",
+            "Next.js",
+            "TailwindCSS",
+            "Nest.js",
+            "PostgreSQL",
+            "Google Cloud",
+            "OpenAPI",
+            "Figma"
+          ]
+        },
         {
           "url": "https://www.getresponsible.com/",
           "company": "Responsible",

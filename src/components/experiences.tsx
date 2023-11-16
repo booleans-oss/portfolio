@@ -1,14 +1,37 @@
-import { Switch } from "./ui/switch";
-import ExternalArrow from "../icones/ExternalArrow";
 import { useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
+import ExternalArrow from "../icones/ExternalArrow";
 import { cn } from "../lib/utils";
+import { Switch } from "./ui/switch";
 
 export default function ExperiencesComponent() {
   const { t } = useTranslation();
 
   const experiences = useMemo(
     () => [
+      {
+        technical: true,
+        link: "https://brainsecurity.io/en",
+        title: (
+          <h2 className="text-blue-100/90 font-medium group-hover:text-[#818cf8] transition">
+            {t("index.experience.experiences.8.title")} · BRAIN Cyber Awareness{" "}
+            <ExternalArrow className="inline h-4 w-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition" />
+          </h2>
+        ),
+        date: "2023 - Present",
+        achievements: t("index.experience.experiences.8.tasks", {
+          returnObjects: true,
+        }) as Array<string>,
+        tags: (
+          t("index.experience.experiences.8.tags", {
+            returnObjects: true,
+          }) as Array<string>
+        ).map((tag) => (
+          <li className="flex items-center rounded-full bg-blue-500/20 xl:bg-slate-700/10 group-hover:bg-[rgba(87,_242,_33,_0.10)] px-3 py-1 text-sm font-medium leading-5 transition ease-in-out text-blue-100/50 xl:text-blue-100/40 group-hover:text-[#818cf8]">
+            {tag}
+          </li>
+        )),
+      },
       {
         technical: true,
         link: "https://www.responsible.us/",
@@ -18,7 +41,7 @@ export default function ExperiencesComponent() {
             <ExternalArrow className="inline h-4 w-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition" />
           </h2>
         ),
-        date: "2022 - present",
+        date: "2022 - 2023",
         achievements: t("index.experience.experiences.0.tasks", {
           returnObjects: true,
         }) as Array<string>,
