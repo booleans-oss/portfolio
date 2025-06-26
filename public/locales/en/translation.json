@@ -187,6 +187,25 @@
             "Nest.js",
             "Google Cloud"
           ]
+        }, {
+          "title": "Software Engineer",
+          "tasks": [
+            "Migrated the codebase to TypeScript",
+            "Implemented several customer design systems to the platform",
+            "Developed and maintained the platform's engines",
+            "Collaborated with the design team to ensure the quality of the platform's designs"
+          ],
+          "tags": [
+            "Typescript",
+            "React",
+            "Material UI",
+            "Vite",
+            "GraphQL",
+            "Apollo",
+            "Docker",
+            "PostgreSQL",
+            "Figma"
+          ]
         }
       ]
     }
@@ -207,10 +226,33 @@
       "title": "Experience",
       "experiences": [
         {
+          "url": "https://engineai.com",
+          "company": "Engine AI",
+          "title": "Software Engineer",
+          "date": "2024 - Present",
+          "tasks": [
+            "Migrated the codebase to TypeScript",
+            "Implemented several customer design systems to the platform",
+            "Developed and maintained the platform's engines",
+            "Collaborated with the design team to ensure the quality of the platform's designs"
+          ],
+          "tags": [
+            "Typescript",
+            "React",
+            "Material UI",
+            "Vite",
+            "GraphQL",
+            "Apollo",
+            "Docker",
+            "PostgreSQL",
+            "Figma"
+          ]
+        },
+        {
           "url": "https://brainsecurity.io/",
           "company": "BRAIN Cyber Awareness",
           "title": "Software Engineer",
-          "date": "2023 - Present",
+          "date": "2023 - 2024",
           "tasks": [
             "Create smooth, performant, and responsive user interfaces of a game and quizz application",
             "Work alongside the design team to provide an accurate and pixel-perfect implementation of the designs",
@@ -234,7 +276,7 @@
           "url": "https://www.getresponsible.com/",
           "company": "Responsible",
           "title": "Software Engineer",
-          "date": "2022 - Present",
+          "date": "2022 - 2023",
           "tasks": [
             "Deliver high-quality, robust production code for a diverse array of projects for clients like RAINS.",
             "Work alongside creative directors to lead the research, development, and architecture of technical solutions to fulfill business requirements",
@@ -260,7 +302,7 @@
           "url": "https://www.standforua.org/",
           "company": "StandForUA",
           "title": "Software Engineer",
-          "date": "2022 - Present",
+          "date": "2022 - 2024",
           "tasks": [
             "Developed and styled main marketing web applications for Ukraine support using Next.js and Chakra UI",
             "Built and shipped multiple features and extensions leveraging third-party and internal API integrations",
@@ -280,55 +322,6 @@
             "OpenAPI",
             "Figma",
             "Google Analytics"
-          ]
-        },
-        {
-          "url": "https://github.com/development-community",
-          "company": "Development Community",
-          "title": "Chief Technical Officer",
-          "date": "2020 - Present",
-          "tasks": [
-            "Collaborated with other student engineers on projects to create new websites for customers and organizations in the community",
-            "Proposed and implemented scalable solutions to simplify communication with our customers including building a fully interactive commerce and chat platform",
-            "Managed the entire technical department of the organization from designers to engineers and to quality assurance members",
-            "Architected several tools and frameworks to assure the quality of our products in order to increase the team's overall quality of delivery"
-          ],
-          "tags": [
-            "Typescript",
-            "Javascript",
-            "React",
-            "Vue",
-            "TailwindCSS",
-            "MySQL",
-            "Adobe XD",
-            "Nx Workspace",
-            "AWS",
-            "Nest.js"
-          ]
-        },
-        {
-          "url": "https://aysdiscord.com/",
-          "company": "Advertise Your Server",
-          "title": "Software Engineer",
-          "date": "2020 - 2022",
-          "tasks": [
-            "Developed, maintained, and shipped production code for client websites primarily using React, Next.js, TailwindCSS",
-            "Performed quality assurance tests on various sites to ensure cross-browser compatibility and mobile responsiveness",
-            "Built and delivered technical solutions according to customers' requirements",
-            "Assured the full delivery of all frontend projects by the technical teams from understanding customers' needs to quality assurance of colleagues' codes"
-          ],
-          "tags": [
-            "Typescript",
-            "Javascript",
-            "React",
-            "Next.js",
-            "TailwindCSS",
-            "MongoDB",
-            "Turborepo",
-            "Express.js",
-            "Svelte",
-            "Docker",
-            "Terraform"
           ]
         }
       ]

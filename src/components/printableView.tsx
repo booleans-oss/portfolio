@@ -6,12 +6,12 @@ import {
   PhoneIcon,
   PinIcon,
 } from "lucide-react";
+import { useEffect, useMemo, useState } from "react";
+import { useTranslation } from "react-i18next";
 import PrintIcon from "../icones/Print";
 import RightArrow from "../icones/RightArrow";
-import { useTranslation } from "react-i18next";
-import { useEffect, useMemo, useState } from "react";
-import LanguageSelector from "./languageSelector";
 import { cn } from "../lib/utils";
+import LanguageSelector from "./languageSelector";
 
 type Experience = {
   url: string;
@@ -158,13 +158,13 @@ export default function PrintableView() {
             </a>
 
             <a
-              href="https://clementlbn.vercel.app"
+              href="https://portfolio.clement.best"
               target="_blank"
               rel="noreferrer"
               className="flex items-center gap-2 text-sm"
             >
               <GlobeIcon className="inline h-4 w-4" />
-              clementlbn.vercel.app
+             portfolio.clement.best 
             </a>
 
             <span className="flex items-center gap-2 text-sm">

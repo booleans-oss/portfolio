@@ -188,6 +188,25 @@
             "Nest.js",
             "Google Cloud"
           ]
+        }, {
+          "title": "Développeur Fullstack",
+          "tasks": [
+            "Migré le code de base en TypeScript",
+            "Implémenté plusieurs systèmes de conception client pour la plateforme",
+            "Développé et maintenu les moteurs de la plateforme",
+            "Collaboré avec l'équipe de conception pour s'assurer de la qualité des conceptions de la plateforme"
+          ],
+          "tags": [
+            "Typescript",
+            "React",
+            "Material UI",
+            "Vite",
+            "GraphQL",
+            "Apollo",
+            "Docker",
+            "PostgreSQL",
+            "Figma"
+          ]
         }
       ]
     }
@@ -207,6 +226,29 @@
     "experience": {
       "title": "Experience",
       "experiences": [
+        {
+          "url": "https://engineai.com",
+          "company": "Engine AI",
+          "title": "Développeur Fullstack",
+          "date": "2024 - Présent",
+          "tasks": [
+            "Migré le code de base en TypeScript",
+            "Implémenté plusieurs systèmes de conception client pour la plateforme",
+            "Développé et maintenu les moteurs de la plateforme",
+            "Collaboré avec l'équipe de conception pour s'assurer de la qualité des conceptions de la plateforme"
+          ],
+          "tags": [
+            "Typescript",
+            "React",
+            "Material UI",
+            "Vite",
+            "GraphQL",
+            "Apollo",
+            "Docker",
+            "PostgreSQL",
+            "Figma"
+          ]
+        },
         {
           "url": "https://www.getresponsible.com/",
           "company": "Responsible",

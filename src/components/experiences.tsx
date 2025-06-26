@@ -1,14 +1,46 @@
-import { useMemo, useState } from "react";
+import { ReactNode, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 import ExternalArrow from "../icones/ExternalArrow";
 import { cn } from "../lib/utils";
 import { Switch } from "./ui/switch";
 
+type Experience = {
+  technical: boolean;
+  link: string;
+  title: ReactNode;
+  date: string;
+  achievements: Array<string>;
+  tags: Array<ReactNode>;
+};
+
 export default function ExperiencesComponent() {
   const { t } = useTranslation();
 
-  const experiences = useMemo(
+  const experiences = useMemo<Array<Experience>>(
     () => [
+      {
+        technical: true,
+        link: "https://engineai.com",
+        title: (
+          <h2 className="text-blue-100/90 font-medium group-hover:text-[#8BB7BA] transition">
+            {t("index.experience.experiences.9.title")} · Engine AI{" "}
+            <ExternalArrow className="inline h-4 w-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition" />
+          </h2>
+        ),
+        date: "2024 - Present",
+        achievements: t("index.experience.experiences.9.tasks", {
+          returnObjects: true,
+        }) as Array<string>,
+        tags: (
+          t("index.experience.experiences.9.tags", {
+            returnObjects: true,
+          }) as Array<string>
+        ).map((tag) => (
+          <li className="flex items-center rounded-full bg-blue-500/20 xl:bg-slate-700/10 group-hover:bg-[#013134] px-3 py-1 text-sm font-medium leading-5 transition ease-in-out text-blue-100/50 xl:text-blue-100/40 group-hover:text-[#8BB7BA]">
+            {tag}
+          </li>
+        )),
+      },
       {
         technical: true,
         link: "https://brainsecurity.io/en",
