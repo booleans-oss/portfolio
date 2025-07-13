@@ -272,7 +272,7 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="//fonts.gstatic.com" />
       </head>
       <body
-        className={`${manrope.variable} antialiased h-full lg:h-screen w-screen tracking-tighter`}
+        className={`${manrope.variable} antialiased h-screen w-screen tracking-tighter`}
       >
         {children}
         <Analytics />

@@ -2,7 +2,7 @@ import Link from "./link";
 
 export default function Menu() {
   return (
-    <div className="w-screen h-screen lg:h-full pr-5 flex-col flex fixed top-4 left-1 bg-white pb-10">
+    <div className="w-screen h-[100dvh] lg:h-full pr-5 flex-col flex fixed top-4 left-1 bg-white pb-10">
       <div className="space-y-1.5 pb-6 h-fit">
         <svg
           width="233"
@@ -18,13 +18,13 @@ export default function Menu() {
           />
         </svg>
 
-        <p className="text-[3vw] md:text-[2.1vw] lg:text-[1.1vw] leading-[1.1] ml-20 w-2/3">
+        <p className="text-[3vw] md:text-[2.1vw] lg:text-[1.1vw] leading-[1.1] ml-15 w-2/3">
           Fullstack developer with +3 years of experience. I help develop custom software solutions,
           and build efficient full-stack architectures across diverse
           industries.
         </p>
       </div>
-      <div className="h-full w-2/3 flex flex-col place-content-between mt-6 ml-20">
+      <div className="h-full w-2/3 flex flex-col place-content-between mt-6 ml-15">
         <div className="flex flex-col text-[6vw] leading-[1.1] gap-5 [&>a]:border-t border-black">
           <Link to="https://github.com/booleans-oss" external>
             github

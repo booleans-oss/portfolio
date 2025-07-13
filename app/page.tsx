@@ -6,6 +6,7 @@ import experiences from "@/experiences";
 import useIsDesktop from "@/hooks/isDesktop";
 import useDisclosure from "@/hooks/useDisclosure";
 import useOnResize from "@/hooks/useOnResize";
+import { cn } from "@/utils";
 
 import { useRef, useState } from "react";
 
@@ -28,7 +29,14 @@ export default function Home() {
   );
 
   return (
-    <div className="flex flex-col lg:flex-row pt-4 pb-8 lg:pb-2 pl-2 lg:pl-5 w-full h-full">
+    <div
+      className={cn(
+        "flex flex-col lg:flex-row pt-4 pb-8 lg:pb-2 pl-2 lg:pl-5 w-full h-full overflow-scroll",
+        {
+          "overflow-hidden": isMenuOpen,
+        }
+      )}
+    >
       <div className="w-full lg:w-[17vw] h-fit lg:h-full pr-5 flex-col flex">
         <div
           ref={menuHeaderRef}
