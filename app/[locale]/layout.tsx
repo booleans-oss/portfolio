@@ -1,7 +1,10 @@
+import { routing } from "@/i18n/routing";
 import { Analytics } from "@vercel/analytics/next";
 import type { Metadata, Viewport } from "next";
+import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { Manrope } from "next/font/google";
-import "./globals.css";
+import { notFound } from "next/navigation";
+import "../globals.css";
 
 const manrope = Manrope({
   variable: "--font-manrope-sans",
@@ -208,13 +211,23 @@ export const viewport: Viewport = {
   ],
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
+  params,
 }: Readonly<{
   children: React.ReactNode;
+  params: Promise<{ locale: string }>;
 }>) {
+  const { locale } = await params;
+
+  console.log(locale)
+  
+  if (!hasLocale(routing.locales, locale)) {
+    notFound();
+  }
+
   return (
-    <html lang="en">
+    <html lang={locale}>
       <head>
         <script
           type="application/ld+json"
@@ -274,7 +287,7 @@ export default function RootLayout({
       <body
         className={`${manrope.variable} antialiased h-[100dvh] w-screen tracking-tighter`}
       >
-        {children}
+        <NextIntlClientProvider>{children}</NextIntlClientProvider>
         <Analytics />
       </body>
     </html>

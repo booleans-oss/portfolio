@@ -1,0 +1,36 @@
+{
+  "sidebar": {
+    "description": "Fullstack developer with +3 years of experience. I help develop custom software solutions, and build efficient full-stack architectures across diverse industries.",
+    "resume": "resume",
+    "education": "Education",
+    "bachelorProject": "Bachelor - Project",
+    "linkoping": "Linköping University 🇸🇪 (2025)",
+    "goodAt": "Good at",
+    "translate": "EN → FR"
+  },
+  "footer": {
+    "end": "You have reached the end."
+  },
+  "experiences": {
+    "january": "jan",
+    "february": "feb",
+    "march": "mar",
+    "april": "apr",
+    "may": "may",
+    "june": "jun",
+    "july": "jul",
+    "august": "aug",
+    "september": "sep",
+    "october": "oct",
+    "november": "nov",
+    "december": "dec",
+    "engineai": "At Engine AI, I worked as a fullstack developer maintaining visualization engines and delivering custom client projects. Collaborating with design and product teams, I developed interactive data visualization platforms, optimized performance across devices, and built tailor-made software solutions that transformed complex datasets into user-friendly interfaces for enterprise clients.",
+    "brain": "At BRAIN, I worked as a fullstack developer building gamified cybersecurity awareness platforms and secure authentication systems. Collaborating with security experts, I developed the main gaming platform and interactive lesson modules that taught cyber attack prevention and security best practices, transforming complex cybersecurity concepts into engaging, accessible training experiences for enterprise users.",
+    "parkit": "At ParkIt, I worked as a fullstack developer building automated website deployment platforms with AI-powered domain showcasing. I developed streamlined onboarding flows with DNS configuration, AI-generated showcase websites (blogs, e-commerce, portfolios), and admin dashboards with domain analytics, transforming domain selling into automated, data-driven experiences for faster sales.",
+    "responsible": "At RESPONSIBLE, I worked as a fullstack developer building circular fashion platforms where customers could upload and rate clothes for cashback. Collaborating with sustainability teams, I developed brand-specific websites with image upload functionality and comprehensive admin dashboards for inventory management and shipping tracking, creating seamless sustainable e-commerce experiences for fashion-conscious consumers.",
+    "standforua": "At StandForUA, I worked as a fullstack developer building humanitarian aid platforms with multilingual support (5+ languages) and geographical mapping. I developed request listing systems that connected Ukrainians needing help (food, services, accommodation) with global volunteers, creating accessible crisis relief experiences through secure contact matching functionality."
+  },
+  "menu": {
+    "close": "close menu..."
+  }
+}

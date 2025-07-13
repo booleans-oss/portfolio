@@ -1,6 +1,12 @@
+import { useLocale, useTranslations } from "next-intl";
+import NextLink from "next/link";
 import Link from "./link";
 
 export default function Menu() {
+  const t = useTranslations();
+
+  const locale = useLocale();
+
   return (
     <div className="w-screen h-[100dvh] lg:h-full pr-5 flex-col flex fixed top-4 left-1 bg-white pb-10">
       <div className="space-y-1.5 pb-6 h-fit">
@@ -19,9 +25,7 @@ export default function Menu() {
         </svg>
 
         <p className="text-[3vw] md:text-[2.1vw] lg:text-[1.1vw] leading-[1.1] ml-15 w-2/3">
-          Fullstack developer with +3 years of experience. I help develop custom software solutions,
-          and build efficient full-stack architectures across diverse
-          industries.
+          {t("sidebar.description")}
         </p>
       </div>
       <div className="h-full w-2/3 flex flex-col place-content-between mt-6 ml-15">
@@ -39,12 +43,12 @@ export default function Menu() {
             email
           </Link>
           <Link to="https://clementlbn.com/resume.pdf" external>
-            resume
+            {t("sidebar.resume")}
           </Link>
         </div>
         <div className="flex flex-col text-[3vw] gap-5">
           <div>
-            <h2>Education</h2>
+            <h2>{t("sidebar.education")}</h2>
             <div>
               <div>1) Bachelor - Finance</div>
               <div className="text-md">
@@ -52,22 +56,25 @@ export default function Menu() {
               </div>
             </div>
             <div>
-              <div>2) Bachelor - Project</div>
+              <div>2) {t("sidebar.bachelorProject")}</div>
               <div className="text-md">
-                <Link to="https://liu.se">Linköping University 🇸🇪 (2025)</Link>
+                <Link to="https://liu.se">{t("sidebar.linkoping")}</Link>
               </div>
             </div>
           </div>
           <div>
-            <h2>Good at</h2>
+            <h2>{t("sidebar.goodAt")}</h2>
             <div>1) Frontend (React, Vue, ..)</div>
             <div>2) Backend (Node, API, ..)</div>
             <div>3) DevOps (Docker, AWS, ..)</div>
             <div>4) Database (SQL, Mongo, ..)</div>
           </div>
-          <a href="#" className="text-[#ff3700]">
-            EN → FR
-          </a>
+          <NextLink
+            href={locale === "en" ? "/fr" : "/en"}
+            className="text-[#ff3700]"
+          >
+            {t("sidebar.translate")}
+          </NextLink>
         </div>
       </div>
     </div>

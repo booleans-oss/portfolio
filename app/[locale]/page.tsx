@@ -7,10 +7,16 @@ import useIsDesktop from "@/hooks/isDesktop";
 import useDisclosure from "@/hooks/useDisclosure";
 import useOnResize from "@/hooks/useOnResize";
 import { cn } from "@/utils";
+import { useLocale, useTranslations } from "next-intl";
+import NextLink from "next/link";
 
 import { useRef, useState } from "react";
 
 export default function Home() {
+  const t = useTranslations();
+
+  const locale = useLocale();
+
   const menuHeaderRef = useRef<HTMLDivElement>(null);
 
   const isDesktop = useIsDesktop();
@@ -57,9 +63,7 @@ export default function Home() {
           </svg>
 
           <p className="text-[3vw] md:text-[2.1vw] lg:text-[1.1vw] leading-[1.1]">
-            Fullstack developer with +3 years of experience. I help develop
-            custom software solutions, and build efficient full-stack
-            architectures across diverse industries.
+            {t("sidebar.description")}
           </p>
         </div>
         <div className="h-full lg:flex flex-col place-content-between mt-6 hidden">
@@ -77,12 +81,12 @@ export default function Home() {
               email
             </Link>
             <Link to="https://clementlbn.com/resume.pdf" external>
-              resume
+              {t("sidebar.resume")}
             </Link>
           </div>
           <div className="flex flex-col text-[1.1vw] gap-5">
             <div>
-              <h2>Education</h2>
+              <h2>{t("sidebar.education")}</h2>
               <div>
                 <div>1) Bachelor - Finance</div>
                 <div className="text-md">
@@ -92,24 +96,25 @@ export default function Home() {
                 </div>
               </div>
               <div>
-                <div>2) Bachelor - Project</div>
+                <div>2) {t("sidebar.bachelorProject")}</div>
                 <div className="text-md">
-                  <Link to="https://liu.se">
-                    Linköping University 🇸🇪 (2025)
-                  </Link>
+                  <Link to="https://liu.se">{t("sidebar.linkoping")}</Link>
                 </div>
               </div>
             </div>
             <div>
-              <h2>Good at</h2>
+              <h2>{t("sidebar.goodAt")}</h2>
               <div>1) Frontend (React, Vue, ..)</div>
               <div>2) Backend (Node, API, ..)</div>
               <div>3) DevOps (Docker, AWS, ..)</div>
               <div>4) Database (SQL, Mongo, ..)</div>
             </div>
-            <a href="#" className="text-[#ff3700]">
-              EN → FR
-            </a>
+            <NextLink
+              href={locale === "en" ? "/fr" : "/en"}
+              className="text-[#ff3700]"
+            >
+              {t("sidebar.translate")}
+            </NextLink>
           </div>
         </div>
       </div>
@@ -134,7 +139,7 @@ export default function Home() {
             </div>
             <div className="col-start-2 row-start-2 lg:row-start-1 col-span-5 lg:col-span-3 text-[3vw] md:text-[2.1vw] lg:text-[1.1vw]">
               <p className="text-[3vw] md:text-[2.1vw] lg:text-[1.1vw]">
-                You have reached the end.
+                {t("footer.end")}
               </p>
             </div>
             <div className="col-span-4 row-start-1 lg:col-span-2 text-[3vw] md:text-[2.1vw] lg:text-[1.1vw] text-right">
@@ -149,7 +154,7 @@ export default function Home() {
             onClick={toggleMenu}
             className="inline-flex cursor-pointer items-center justify-center gap-2 whitespace-nowrap shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] mx-auto bg-white border border-black h-10 rounded-full px-6 has-[>svg]:px-4"
           >
-            {isMenuOpen && "close "} menu...
+            {isMenuOpen ? t("menu.close") : "menu..."}
           </button>
         </div>
       )}
