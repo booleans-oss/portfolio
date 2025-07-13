@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/next";
 import type { Metadata, Viewport } from "next";
 import { Manrope } from "next/font/google";
 import "./globals.css";
@@ -271,6 +272,7 @@ export default function RootLayout({
         className={`${manrope.variable} antialiased h-full lg:h-screen w-screen tracking-tighter`}
       >
         {children}
+        <Analytics />
       </body>
     </html>
   );
