@@ -32,5 +32,12 @@
   },
   "menu": {
     "close": "fermer le menu..."
+  },
+  "Metadata": {
+    "title": "Clement Lebon - Développeur Fullstack",
+    "description": "Développeur full-stack expérimenté spécialisé en React, Next.js, Node.js et technologies web modernes. Disponible pour des projets freelance et des opportunités à temps plein.",
+    "keywords": "développeur full stack, développeur frontend, développeur react, développeur next.js, designer ui ux, développeur javascript, développeur typescript, développeur web, portfolio, développeur freelance, ingénieur logiciel, designer web, design responsive, développement web moderne, développeur node.js",
+    "url": "https://clementlbn.com",
+    "ogImage": "https://clementlbn.com/opengraph-image-fr.png"
   }
 }
