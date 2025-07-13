@@ -8,7 +8,7 @@ export default function Menu() {
   const locale = useLocale();
 
   return (
-    <div className="w-screen h-[100dvh] lg:h-full pr-5 flex-col flex fixed top-4 left-1 bg-white pb-10">
+    <div className="w-screen h-[100dvh] lg:h-full pr-5 flex-col flex fixed top-0 pt-4 left-1 bg-white pb-10">
       <div className="space-y-1.5 pb-6 h-fit">
         <svg
           width="233"
