@@ -25,5 +25,8 @@ body {
   font-family: var(--font-manrope-sans), Arial, Helvetica, sans-serif;
   font-weight: 600;
   scrollbar-width: thin;
+}
 
+body::selection {
+  background: #ff3700;
 }
