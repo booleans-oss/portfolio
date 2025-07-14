@@ -90,7 +90,7 @@ export default function Home() {
               <div>
                 <div>1) Bachelor - Finance</div>
                 <div className="text-md">
-                  <Link to="https://inseec.com">
+                  <Link to="https://inseec.com" external>
                     INSEEC, Bordeaux 🇫🇷 (2027)
                   </Link>
                 </div>
@@ -98,7 +98,7 @@ export default function Home() {
               <div>
                 <div>2) {t("sidebar.bachelorProject")}</div>
                 <div className="text-md">
-                  <Link to="https://liu.se">{t("sidebar.linkoping")}</Link>
+                  <Link to="https://liu.se" external>{t("sidebar.linkoping")}</Link>
                 </div>
               </div>
             </div>
@@ -149,7 +149,7 @@ export default function Home() {
         </div>
       </div>
       {!isDesktop && (
-        <div className="fixed bottom-0 left-0 w-screen h-10 bg-transparent auto z-50 p-2 flex mb-4">
+        <div className="fixed bottom-0 left-0 w-screen h-10 bg-transparent z-20 p-2 flex mb-4">
           <button
             onClick={toggleMenu}
             className="inline-flex cursor-pointer items-center justify-center gap-2 whitespace-nowrap shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] mx-auto bg-white border border-black h-10 rounded-full px-6 has-[>svg]:px-4"

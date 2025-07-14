@@ -27,6 +27,12 @@ export default function Menu() {
         <p className="text-[3vw] md:text-[2.1vw] lg:text-[1.1vw] leading-[1.1] ml-15 w-2/3">
           {t("sidebar.description")}
         </p>
+        <NextLink
+          href={locale === "en" ? "/fr" : "/en"}
+          className="text-[#ff3700] ml-15"
+        >
+          {t("sidebar.translate")}
+        </NextLink>
       </div>
       <div className="h-full w-2/3 flex flex-col place-content-between mt-6 ml-15">
         <div className="flex flex-col text-[6vw] leading-[1.1] gap-5 [&>a]:border-t border-black">
@@ -52,13 +58,17 @@ export default function Menu() {
             <div>
               <div>1) Bachelor - Finance</div>
               <div className="text-md">
-                <Link to="https://inseec.com">INSEEC, Bordeaux 🇫🇷 (2027)</Link>
+                <Link to="https://inseec.com" external>
+                  INSEEC, Bordeaux 🇫🇷 (2027)
+                </Link>
               </div>
             </div>
             <div>
               <div>2) {t("sidebar.bachelorProject")}</div>
               <div className="text-md">
-                <Link to="https://liu.se">{t("sidebar.linkoping")}</Link>
+                <Link to="https://liu.se" external>
+                  {t("sidebar.linkoping")}
+                </Link>
               </div>
             </div>
           </div>
@@ -69,12 +79,6 @@ export default function Menu() {
             <div>3) DevOps (Docker, AWS, ..)</div>
             <div>4) Database (SQL, Mongo, ..)</div>
           </div>
-          <NextLink
-            href={locale === "en" ? "/fr" : "/en"}
-            className="text-[#ff3700]"
-          >
-            {t("sidebar.translate")}
-          </NextLink>
         </div>
       </div>
     </div>

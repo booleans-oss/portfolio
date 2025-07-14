@@ -14,7 +14,7 @@ const manrope = Manrope({
 
 const siteConfig = {
   name: "Clement Lebon",
-  ogImage: "https://clementlbn.com/opengraph-image.png",
+  ogImage: "https://clementlbn.com/opengraph-image",
   author: {
     name: "Clement Lebon",
     email: "hey@clementlbn.com",
