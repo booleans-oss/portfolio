@@ -80,7 +80,7 @@ export default function Home() {
             <Link to="mailto:hey@clementlbn.com" external>
               email
             </Link>
-            <Link to="https://clementlbn.com/resume.pdf" external>
+            <Link to={t("sidebar.resumeLink")} external>
               {t("sidebar.resume")}
             </Link>
           </div>

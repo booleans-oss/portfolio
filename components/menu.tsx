@@ -42,7 +42,7 @@ export default function Menu() {
           <Link to="mailto:clementlebon6@gmail.com" external>
             email
           </Link>
-          <Link to="https://clementlbn.com/resume.pdf" external>
+          <Link to={t("sidebar.resumeLink")} external>
             {t("sidebar.resume")}
           </Link>
         </div>
