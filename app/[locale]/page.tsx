@@ -91,7 +91,7 @@ export default function Home() {
                 <div>1) Bachelor - Finance</div>
                 <div className="text-md">
                   <Link to="https://inseec.com" external>
-                    INSEEC, Bordeaux 🇫🇷 (2027)
+                    INSEEC, Bordeaux 🇫🇷 (2025)
                   </Link>
                 </div>
               </div>
