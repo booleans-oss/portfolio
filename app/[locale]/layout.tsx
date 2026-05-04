@@ -14,10 +14,10 @@ const manrope = Manrope({
 
 const siteConfig = {
   name: "Clement Lebon",
-  ogImage: "https://clementlbn.com/opengraph-image",
+  ogImage: "https://clement.best/opengraph-image",
   author: {
     name: "Clement Lebon",
-    email: "hey@clementlbn.com",
+    email: "hey@clement.best",
     twitter: "@clementlebon",
     linkedin: "clement-lebon",
     github: "booleans-oss",

@@ -21,7 +21,7 @@ export default async function Image({
 
   const imagePath = `/images/${imageFilename}`;
 
-  const imageUrl = `https://clementlbn.com/${imagePath}`;
+  const imageUrl = `https://clement.best/${imagePath}`;
 
   try {
     const response = await fetch(imageUrl);

@@ -42,7 +42,7 @@ export default function Menu() {
           <Link to="https://www.linkedin.com/in/clement-lebon/" external>
             linkedin
           </Link>
-          <Link to="https://clementlbn.com" external>
+          <Link to="https://clement.best" external>
             portfolio
           </Link>
           <Link to="mailto:clementlebon6@gmail.com" external>

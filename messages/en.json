@@ -1,8 +1,8 @@
 {
   "sidebar": {
-    "description": "Fullstack developer with +3 years of experience. I help develop custom software solutions, and build efficient full-stack architectures across diverse industries.",
+    "description": "Product-minded engineer with 4+ years building data-rich platforms across fintech, cybersecurity, and e-commerce. I turn complex business problems into clean, scalable software.",
     "resume": "resume",
-    "resumeLink": "https://clementlbn.com/resume-en.pdf",
+    "resumeLink": "https://clement.best/resume-en.pdf",
     "education": "Education",
     "bachelorProject": "Bachelor - Project",
     "linkoping": "Linköping University 🇸🇪 (2025)",
@@ -25,11 +25,13 @@
     "october": "oct",
     "november": "nov",
     "december": "dec",
-    "engineai": "At Engine AI, I worked as a fullstack developer maintaining visualization engines and delivering custom client projects. Collaborating with design and product teams, I developed interactive data visualization platforms, optimized performance across devices, and built tailor-made software solutions that transformed complex datasets into user-friendly interfaces for enterprise clients.",
-    "brain": "At BRAIN, I worked as a fullstack developer building gamified cybersecurity awareness platforms and secure authentication systems. Collaborating with security experts, I developed the main gaming platform and interactive lesson modules that taught cyber attack prevention and security best practices, transforming complex cybersecurity concepts into engaging, accessible training experiences for enterprise users.",
-    "parkit": "At ParkIt, I worked as a fullstack developer building automated website deployment platforms with AI-powered domain showcasing. I developed streamlined onboarding flows with DNS configuration, AI-generated showcase websites (blogs, e-commerce, portfolios), and admin dashboards with domain analytics, transforming domain selling into automated, data-driven experiences for faster sales.",
-    "responsible": "At RESPONSIBLE, I worked as a fullstack developer building circular fashion platforms where customers could upload and rate clothes for cashback. Collaborating with sustainability teams, I developed brand-specific websites with image upload functionality and comprehensive admin dashboards for inventory management and shipping tracking, creating seamless sustainable e-commerce experiences for fashion-conscious consumers.",
-    "standforua": "At StandForUA, I worked as a fullstack developer building humanitarian aid platforms with multilingual support (5+ languages) and geographical mapping. I developed request listing systems that connected Ukrainians needing help (food, services, accommodation) with global volunteers, creating accessible crisis relief experiences through secure contact matching functionality."
+    "present": "present",
+    "engineai": "I joined as a frontend engineer and within six months became the sole software engineer on all client projects, owning both frontend and backend for every enterprise delivery. After a company restructure, I moved into the Capital Markets squad where I now work directly with buy-side firms to build tailored solutions. Today I own every layer of each project, from architecting the full data pipeline to defining, training, and fine-tuning the AI models that power them.",
+    "wealthcome": "I worked as the data engineer responsible for migrating millions of assets under management from third-party platforms into Wealthcome. That meant moving trillions of dollars worth of financial data, starting from scraping source platforms, loading into a staging database, and consolidating into production. Every step required strict validation workflows, robust data consolidation, and rigid transactional guarantees to make sure nothing was lost along the way.",
+    "brain": "I developed a gamified cybersecurity awareness platform that helped enterprise clients reduce employee security incidents. I built interactive training modules and secure authentication systems, turning complex security concepts into engaging experiences that improved compliance rates and lowered organizational risk.",
+    "parkit": "I built an automated domain marketplace with AI-powered showcase generation. I streamlined the full workflow from DNS configuration to AI-generated storefronts, and delivered admin dashboards with conversion analytics, helping domain sellers accelerate time-to-sale and grow portfolio revenue.",
+    "responsible": "I developed circular fashion platforms that enabled brands to launch buy-back and resale programs with integrated cashback. I built brand-specific storefronts and inventory management dashboards, helping retailers unlock new revenue from sustainable commerce while cutting product waste.",
+    "standforua": "I built a multilingual humanitarian aid platform that connected Ukrainians in need with volunteers around the world. I developed a request-matching system supporting over five languages with geographic mapping, helping thousands of people find food, services, and housing through secure contact coordination."
   },
   "menu": {
     "close": "close menu..."
@@ -38,7 +40,7 @@
     "title": "Clement Lebon - Fullstack Developer",
     "description": "Experienced full-stack developer specializing in React, Next.js, Node.js, and modern web technologies. Available for freelance projects and full-time opportunities.",
     "keywords": "full stack developer, frontend developer, react developer, next.js developer, ui ux designer, javascript developer, typescript developer, web developer, portfolio, freelance developer, software engineer, web designer, responsive design, modern web development, node.js developer",
-    "url": "https://clementlbn.com",
-    "ogImage": "https://clementlbn.com/opengraph-image-en.png"
+    "url": "https://clement.best",
+    "ogImage": "https://clement.best/opengraph-image-en.png"
   }
 }

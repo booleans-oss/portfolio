@@ -74,10 +74,10 @@ export default function Home() {
             <Link to="https://www.linkedin.com/in/clement-lebon/" external>
               linkedin
             </Link>
-            <Link to="https://clementlbn.com" external>
+            <Link to="https://clement.best" external>
               portfolio
             </Link>
-            <Link to="mailto:hey@clementlbn.com" external>
+            <Link to="mailto:hey@clement.best" external>
               email
             </Link>
             <Link to={t("sidebar.resumeLink")} external>
@@ -125,7 +125,7 @@ export default function Home() {
         >
           <div className="col-span-1">#</div>
           <div className="col-span-6 lg:col-span-3">Description</div>
-          <div className="col-span-4 hidden lg:block">Stack</div>
+          <div className="col-span-4 hidden lg:block">Expertise</div>
           <div className="col-span-1 lg:col-span-2 justify-self-end">Date</div>
         </header>
         <div className="flex flex-col gap-10 mt-0 lg:mt-10">
@@ -143,7 +143,7 @@ export default function Home() {
               </p>
             </div>
             <div className="col-span-4 row-start-1 lg:col-span-2 text-[3vw] md:text-[2.1vw] lg:text-[1.1vw] text-right">
-              2021 .. 2025
+              2022 .. 2026
             </div>
           </div>
         </div>

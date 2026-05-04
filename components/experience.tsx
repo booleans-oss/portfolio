@@ -15,7 +15,7 @@ export type ExperienceProps = {
   stack: string[];
   dates: {
     start: ExperienceDate;
-    end: ExperienceDate;
+    end?: ExperienceDate;
   };
   link?: {
     text: string;
@@ -50,7 +50,9 @@ export default function Experience({
 
       <div className="col-span-4 lg:col-span-2 text-[3vw] md:text-[2.1vw] lg:text-[1.1vw] text-right">
         {t(`experiences.${dates.start.month}`)} {dates.start.year} ..{" "}
-        {t(`experiences.${dates.end.month}`)} {dates.end.year}
+        {dates.end
+          ? `${t(`experiences.${dates.end.month}`)} ${dates.end.year}`
+          : t("experiences.present")}
       </div>
       <div className="col-span-7 col-start-2 lg:col-span-3 lg:col-start-2 text-[3vw]/tight md:text-[2.1vw]/tight lg:text-[1.1vw]/tight leading-[1.3] place-content-between flex flex-col pr-0 lg:pr-5 w-full">
         <p className="text-[3vw] md:text-[2.1vw] lg:text-[1.1vw]">

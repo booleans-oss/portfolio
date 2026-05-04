@@ -3,30 +3,25 @@ import EngineAIImage from "@/images/engineai.png";
 import ParkItImage from "@/images/parkit.png";
 import ResponsibleImage from "@/images/responsible.png";
 import StandForUAImage from "@/images/standforua.png";
+import WealthcomeImage from "@/images/wealthcome.png";
 import { ExperienceProps } from "./components/experience";
 
 const experiences: Array<ExperienceProps> = [
   {
-    index: 5,
+    index: 6,
     name: "Engine AI",
     namespace: "engineai",
     stack: [
-      "React",
-      "Material UI",
-      "GraphQL",
-      "Apollo",
-      "Nx Workspace",
-      "PostgreSQL",
+      "Capital Markets",
+      "AI/ML Engineering",
+      "Data Architecture",
+      "Web Development",
     ],
     dates: {
       start: {
         month: "april",
         year: "2024",
       },
-      end: {
-        month: "june",
-        year: "2025",
-      }
     },
     link: {
       text: "engineai.com",
@@ -36,10 +31,32 @@ const experiences: Array<ExperienceProps> = [
     bigImage: false,
   },
   {
+    index: 5,
+    name: "Wealthcome",
+    namespace: "wealthcome",
+    stack: ["Data Engineering", "Fintech", "Data Migration", "Pipeline Design"],
+    dates: {
+      start: {
+        month: "september",
+        year: "2025",
+      },
+      end: {
+        month: "november",
+        year: "2025",
+      },
+    },
+    link: {
+      text: "wealthcome.fr",
+      url: "https://wealthcome.fr",
+    },
+    image: WealthcomeImage,
+    bigImage: true,
+  },
+  {
     index: 4,
     name: "BRAIN",
     namespace: "brain",
-    stack: ["Next.js", "TailwindCSS", "Nest.js", "PostgreSQL", "TypeORM"],
+    stack: ["Web Development", "Gamification", "Cybersecurity", "UI/UX Design"],
     dates: {
       start: {
         month: "june",
@@ -48,7 +65,7 @@ const experiences: Array<ExperienceProps> = [
       end: {
         month: "april",
         year: "2024",
-      }
+      },
     },
     link: {
       text: "brainsecurity.io",
@@ -61,7 +78,7 @@ const experiences: Array<ExperienceProps> = [
     index: 3,
     name: "RESPONSIBLE",
     namespace: "responsible",
-    stack: ["Next.js", "ChakraUI", "Nest.js", "Azure", "Shopify"],
+    stack: ["E-commerce", "Web Development", "Sustainability", "UI/UX Design"],
     dates: {
       start: {
         month: "march",
@@ -70,7 +87,7 @@ const experiences: Array<ExperienceProps> = [
       end: {
         month: "july",
         year: "2023",
-      }
+      },
     },
     link: {
       text: "responsible.com",
@@ -83,7 +100,7 @@ const experiences: Array<ExperienceProps> = [
     index: 2,
     name: "ParkIt",
     namespace: "parkit",
-    stack: ["Next.js", "Serverless", "TailwindCSS", "PostgreSQL", "Drizzle"],
+    stack: ["AI Automation", "Web Development", "Marketplace", "Context Engineering"],
     dates: {
       start: {
         month: "august",
@@ -92,7 +109,7 @@ const experiences: Array<ExperienceProps> = [
       end: {
         month: "january",
         year: "2023",
-      }
+      },
     },
     link: {
       text: "parkit.io",
@@ -105,7 +122,7 @@ const experiences: Array<ExperienceProps> = [
     index: 1,
     name: "StandForUA",
     namespace: "standforua",
-    stack: ["Next.js", "ChakraUI", "Loopback", "AWS", "Google API"],
+    stack: ["Web Development", "Humanitarian Tech", "i18n", "Geolocation"],
     dates: {
       start: {
         month: "january",
@@ -114,7 +131,7 @@ const experiences: Array<ExperienceProps> = [
       end: {
         month: "april",
         year: "2023",
-      }
+      },
     },
     link: {
       text: "standforua.org",

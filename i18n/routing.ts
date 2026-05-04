@@ -6,12 +6,12 @@ export const routing = defineRouting({
   localePrefix: 'never',
   domains: [
     {
-      domain: "clementlbn.com",
+      domain: "clement.best",
       defaultLocale: "en",
       locales: ["en"],
     },
     {
-      domain: "fr.clementlbn.com",
+      domain: "fr.clement.best",
       defaultLocale: "fr",
       locales: ["fr"],
     },
